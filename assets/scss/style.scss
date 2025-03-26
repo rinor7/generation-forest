@@ -28,3 +28,7 @@
 @import "blocks/references";
 @import "blocks/block-image-text";
 @import "blocks/block-text-image";
+
+header {
+    display: none!important;
+}
