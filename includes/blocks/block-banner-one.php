@@ -5,6 +5,7 @@
         <div class="row">
             <div class="lefts col-lg-6">
                 <h1><?php echo ( get_field('group_banner')['title'] );?></h1>
+                <h1><?php echo ( get_field('group_banner')['test'] );?></h1>
             </div>
             <div class="rights col-lg-6">
             </div>
