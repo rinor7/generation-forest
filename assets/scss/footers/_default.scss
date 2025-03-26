@@ -1,0 +1,36 @@
+/* Footer Demo2*/
+footer {
+    .columns {
+        .col-lg-3 {
+            margin: 30px 0;
+
+            @include md {
+                max-width: 600px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include sm {
+                max-width: 90%;
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        li {
+
+            a,
+            p {}
+        }
+    }
+}
+
+/* Footer Demo2*/

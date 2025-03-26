@@ -1,0 +1,42 @@
+/* Header with Menu from Rightside*/
+header {
+    position: relative;
+    .header-right-menu {
+        nav {
+            #navbarNav {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                display: flex;
+                flex: 1;
+                top: 0;
+                @include md {
+                    position: fixed;
+                    display: flex;
+                    right: -80%;
+                    height: 100%;
+                    width: 75%;
+                    bottom: 0;
+                    background: $white;
+                    transition: .2s ease-out;
+                    &.show {
+                        right: 0 !important;
+                        transition: .2s ease-in-out;
+                    }
+                }
+
+                @include xs {
+                    width: 100%;
+                    right: -100%;
+                }
+
+                ul {
+                    justify-content: center;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Header Demo2 END*/
