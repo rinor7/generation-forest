@@ -1,1 +1,43 @@
-node_modules
+# Node.js related files
+node_modules/
+package-lock.json
+yarn.lock
+
+# Gulp build files (if you're only compiling locally)
+gulpfile.js
+gulpfile.babel.js
+
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+*.local
+*.swp
+.idea/
+.vscode/
+*.bak
+*.tmp
+*.cache
+*.sqlite
+*.sqlite3
+coverage/
+dist/
+build/
+out/
+logs/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Mac system files
+__MACOSX/
+
+# Ignore dependency directories
+.bower_components/
+.venv/
