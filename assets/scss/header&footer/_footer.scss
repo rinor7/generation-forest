@@ -257,7 +257,13 @@ footer {
 
             &-right {
                 .footer-right-right-position {
-
+                    .middle-widget {
+                        li {
+                            a {
+                                font-size: 26px;
+                            }
+                        }
+                    }
                 }
             }
         }
