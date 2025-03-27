@@ -9,7 +9,7 @@
 	wp_enqueue_style('base-theme-main-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), null );
 	wp_enqueue_style( 'base-theme-swiper-style', get_template_directory_uri() . '/assets/css/libs/swiper.css', array(), null );
 	// wp_enqueue_style( 'base-theme-slick-style', get_template_directory_uri() . '/assets/css/libs/slick.css', array(), null );
-	wp_enqueue_style( 'base-theme-awesome-style', get_template_directory_uri() . '/assets/css/libs/font-awesome.css', array(), null );
+	wp_enqueue_style( 'base-theme-awesome-style', get_template_directory_uri() . '/assets/css/libs/fontawesome/css/all.css', array(), null );
 	
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/libs/bootstrap.min.js', array(), null, true );
 	wp_enqueue_script( 'base-theme-jquery-js', get_template_directory_uri() . '/assets/js/libs/jquery.js', array(), null, false );
@@ -29,6 +29,11 @@ require get_template_directory() . '/theme-options/acf-relocate.php';
 require get_template_directory() . '/theme-options/widgets.php';
 require get_template_directory() . '/theme-options/enable-php-on-widgets.php';
 require get_template_directory() . '/theme-options/container-admin-customize.php';
-require get_template_directory() . '/theme-options/acf-navigation-background.php';
 require get_template_directory() . '/theme-options/general-functions.php';
 require get_template_directory() . '/theme-options/taxonomies.php';
+
+
+
+
+
+

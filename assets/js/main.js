@@ -35,39 +35,18 @@ $(document).ready(function() {
          $('.logo_site').addClass('scroll-imgchange'); 
          $('.navbar-nav').addClass('scroll-navchange');
          $('.headerbar').addClass('scroll-headerchange');
-         $('.navbar-toggler2').addClass('scroll-hamburger');
+        //  $('.navbar-toggler2').addClass('scroll-hamburger');
          $('header').addClass('shadow-header');
       } else {
          $('.logo_header').removeClass('scroll-imgchange');
          $('.logo_site').removeClass('scroll-imgchange');
          $('.navbar-nav').removeClass('scroll-navchange');
          $('.headerbar').removeClass('scroll-headerchange');
-         $('.navbar-toggler2').removeClass('scroll-hamburger');
+        //  $('.navbar-toggler2').removeClass('scroll-hamburger');
          $('header').removeClass('shadow-header');
       }
   });
 });
-
-// for rightmenu.php header
-// $(document).ready(function() {
-//   $('.navbar-toggler').click(function() {
-//     $('.menu-menu-1-container').toggleClass('act');
-//   });
-
-//   $('li a').click(function() {
-//     $('.menu-menu-1-container').removeClass('act');
-//     $('.menu-bottom').removeClass('menu-bottom-click');
-//     $('.menu-top').removeClass('menu-top-click');
-//   });
-// });
- 
-// Search Result
-// $('.control').click( function(){
-//   $('body').addClass('search-active');
-//   $('.fa-search-loc').addClass('d-none');
-//   $('.input-search').focus();
-// });
-// Search Result END
 
 $('.icon-close').click( function(){
   $('body').removeClass('search-active');
@@ -172,3 +151,46 @@ var swiper = new Swiper(".mySwiper-boxes-section", {
   },
 });
 
+
+// change newsletter butto name when form submitted 
+document.addEventListener("DOMContentLoaded", function () {
+  let subscribeButton = document.getElementById("mc-embedded-subscribe");
+  let emailInput = document.getElementById("mce-EMAIL");
+  let successMessage = document.getElementById("mce-success-response");
+  let errorMessage = document.querySelector(".mce_inline_error"); // Original error message
+
+  // Hide the original error message
+  if (errorMessage) {
+      errorMessage.style.display = "none";
+  }
+
+  // Form submission event
+  document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", function () {
+      setTimeout(() => {
+          // Check if there's an error (empty email field)
+          if (emailInput.classList.contains("mce_inline_error")) {
+              subscribeButton.value = "Email is required!";
+              subscribeButton.classList.add("error"); // Add error class
+              subscribeButton.classList.remove("success"); // Remove success class if exists
+          } else {
+              subscribeButton.classList.remove("error"); // Remove error class if fixed
+          }
+      }, 100); // Small delay to allow Mailchimp validation to run
+  });
+
+  // MutationObserver for success message
+  let observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function () {
+          if (successMessage && successMessage.style.display === "block") {
+              subscribeButton.value = "Subscribed!";
+              subscribeButton.classList.add("success"); // Add success class
+              subscribeButton.classList.remove("error"); // Remove error class
+              subscribeButton.disabled = true; // Optional: Disable button on success
+          }
+      });
+  });
+
+  if (successMessage) {
+      observer.observe(successMessage, { attributes: true, attributeFilter: ["style"] });
+  }
+});

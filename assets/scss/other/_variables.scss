@@ -9,8 +9,90 @@ $secondary-color: #000;
 $secondary-color-light: #000000a4;
 $grey-color: #888;
 
+
+:root {
+    --Natural-colorWhite: #FFFFFF;
+    --Natural-colorBlack: #000000;
+
+    --Basic-colorWhite: #FFF;
+    --Basic-colorBlack: #000;
+
+    /* Neutral Shades */
+    --Neutral-colorNeutral: #99a2aa;
+    --Neutral-colorNeutralLight700: #e6e9eb;
+    // --Neutral-colorNeutralLight600: #f1f3f5;    
+    // --Neutral-colorNeutralLight500: #f8f9fa;
+    // --Neutral-colorNeutralLight400: #f8f9fa;
+    // --Neutral-colorNeutralLight300: #f8f9fa;   
+    // --Neutral-colorNeutralLight200: #f8f9fa;
+    // --Neutral-colorNeutralLight100: #f8f9fa;
+
+    /* Dark Grey Shades */
+    --Natural-colorDarkGrey500: #0C0D0C;
+    --Natural-colorDarkGrey400: #1A1A1A;
+    --Natural-colorDarkGrey300: #333333;
+    --Natural-colorDarkGrey200: #4D4D4D;
+    --Natural-colorDarkGrey100: #666666;
+  
+    /* Grey */
+    --Natural-colorGrey: #888888;
+  
+    /* Light Grey Shades */
+    --Natural-colorLightGrey100: #AAAAAA;
+    --Natural-colorLightGrey200: #BBBBBB;
+    --Natural-colorLightGrey300: #CCCCCC;
+    --Natural-colorLightGrey400: #DDDDDD;
+    --Natural-colorLightGrey500: #EEEEEE;
+  
+    /* Dark Primary Shades */
+    --Natural-colorDarkPrimary400: #003478;
+    --Natural-colorDarkPrimary300: #0045A5;
+    --Natural-colorDarkPrimary200: #0055D2;
+    --Natural-colorDarkPrimary100: #0066FF;
+  
+    /* Primary */
+    --Natural-colorPrimary: #2BA28B;
+  
+    /* Light Primary Shades */
+    --Natural-colorLightPrimary100: #4AC6A2;
+    --Natural-colorLightPrimary200: #6DE3BB;
+    --Natural-colorLightPrimary300: #8CFFD5;
+    --Natural-colorLightPrimary400: #AAFFE6;
+  
+    /* Dark Secondary Shades */
+    --Natural-colorDarkSecondary400: #552200;
+    --Natural-colorDarkSecondary300: #773300;
+    --Natural-colorDarkSecondary200: #994400;
+    --Natural-colorDarkSecondary100: #BB5500;
+  
+    /* Secondary */
+    --Natural-colorSecondary: #DD6600;
+  
+    /* Light Secondary Shades */
+    --Natural-colorLightSecondary100: #EE7722;
+    --Natural-colorLightSecondary200: #FF8844;
+    --Natural-colorLightSecondary300: #FFA766;
+    --Natural-colorLightSecondary400: #FFBB88;
+  
+    /* Dark Tertiary Shades */
+    --Natural-colorDarkTertiary400: #220055;
+    --Natural-colorDarkTertiary300: #330077;
+    --Natural-colorDarkTertiary200: #440099;
+    --Natural-colorDarkTertiary100: #5500BB;
+  
+    /* Tertiary */
+    --Natural-colorTertiary: #6600DD;
+  
+    /* Light Tertiary Shades */
+    --Natural-colorLightTertiary100: #7722EE;
+    --Natural-colorLightTertiary200: #8844FF;
+    --Natural-colorLightTertiary300: #A766FF;
+    --Natural-colorLightTertiary400: #BB88FF;
+  }
+  
+
 @mixin transition {
-    transition: .3s ease-in-out;
+    transition: all .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
     -ms-transition: .3s ease-in-out;

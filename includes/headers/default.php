@@ -73,6 +73,17 @@
                             </a>
                             <?php } ?>
 
+                            <?php wp_nav_menu(
+                                array(
+                                'theme_location'    => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                                'menu_class'        => 'navbar-nav',
+                                'container_class'  => 'collapse navbar-collapse main-nav-toggle',
+                                'container_id'    => 'navbarNav',
+                                )
+                                ); 
+                            ?>
+
                             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,24 +96,15 @@
                             </nav>
 
 
-                            <?php wp_nav_menu(
-                                array(
-                                'theme_location'    => 'menu-1',
-                                'menu_id'        => 'primary-menu',
-                                'menu_class'        => 'navbar-nav',
-                                'container_class'  => 'collapse navbar-collapse main-nav-toggle',
-                                'container_id'    => 'navbarNav',
-                                )
-                                ); 
-                            ?>
+                        
 
-                            <div class="right-widget d-none-mobile">
+                            <!-- <div class="right-widget d-none-mobile">
                                 <?php if(is_active_sidebar('widget-6') ) { ?>
                                 <ul>
                                     <?php dynamic_sidebar('widget-6');?>
                                 </ul>
                                 <?php } ?>
-                            </div>
+                            </div> -->
 
                         </nav>
                     </div>

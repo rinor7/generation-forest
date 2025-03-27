@@ -6,6 +6,10 @@ function standard_widgets_init() {
 			'id'            => 'widget-1',)
 	);
 	register_sidebar(
+		array('name'          => esc_html__( 'Footer Newsletter', 'standard' ),
+			'id'            => 'footer-8',)
+	);
+	register_sidebar(
 		array('name'          => esc_html__( 'Widget 2', 'standard' ),
 			'id'            => 'widget-2',)
 	); 
@@ -40,6 +44,18 @@ function standard_widgets_init() {
 	register_sidebar(
 		array('name'          => esc_html__( 'footer 4', 'standard' ),
 			'id'            => 'footer-4',)
+	);
+	register_sidebar(
+		array('name'          => esc_html__( 'footer 5', 'standard' ),
+			'id'            => 'footer-5',)
+	);
+	register_sidebar(
+		array('name'          => esc_html__( 'Footer Copyright Links', 'standard' ),
+			'id'            => 'footer-6',)
+	);
+	register_sidebar(
+		array('name'          => esc_html__( 'Footer Copyright Text', 'standard' ),
+			'id'            => 'footer-7',)
 	);
 	register_sidebar(
 		array('name'          => esc_html__( 'Contact Form 1', 'standard' ),

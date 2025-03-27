@@ -8,34 +8,54 @@
     <div class="columns">
         <div class="container" id="foooter">
             <div class="row">
-                <div class="col-lg-3 footer-1">
-                    <a aria-label="logo" class="logo_header" href="<?php echo esc_url(home_url('/')); ?>">
+
+                <div class="col-lg-6 footer-left">
+                    <a aria-label="logo" class="logo_footer" href="<?php echo esc_url(home_url('/')); ?>">
                         <ul>
                             <?php dynamic_sidebar('footer-1');?>
                         </ul>
                     </a>
-                </div>
-                <div class="col-lg-3 footer-2">
                     <ul>
-                        <?php dynamic_sidebar('footer-2');?>
+                        <?php dynamic_sidebar('footer-8');?>
                     </ul>
                 </div>
-                <div class="col-lg-3 footer-3">
-                    <ul>
-                        <?php dynamic_sidebar('footer-3');?>
-                    </ul>
-                </div>
-                <div class="col-lg-3 footer-4">
-                    <ul>
-                        <?php dynamic_sidebar('footer-4');?>
-                    </ul>
+                <div class="col-lg-6 footer-right">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 footer-right-left">
+                            <ul>
+                                <?php dynamic_sidebar('footer-2');?>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 footer-right-right">
+                            <div class="footer-right-right-position">
+                                <ul class="upside-widget">
+                                    <?php dynamic_sidebar('footer-3');?>
+                                </ul>
+                                <ul class="middle-widget">
+                                    <?php dynamic_sidebar('footer-4');?>
+                                </ul>
+                                <ul class="downside-widget">
+                                    <?php dynamic_sidebar('footer-5');?>
+                                </ul>
+                            </div>
+                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="copyrights">
-            <p>&copy;<?php echo date(' Y  ') ;?>All rights Reserved. <a href="/">Base Theme</a> </p>
+            <?php if ( is_active_sidebar( 'footer-7' ) ) : ?>
+                <ul class="copyrights-text">
+                    <?php dynamic_sidebar( 'footer-7' ); ?>
+                </ul>
+            <?php endif; ?>
+            <?php if ( is_active_sidebar( 'footer-6' ) ) : ?>
+                <ul class="copyrights-navigation">
+                    <?php dynamic_sidebar( 'footer-6' ); ?>
+                </ul>
+            <?php endif; ?>
         </div>
     </div>
 </footer>
