@@ -65,3 +65,14 @@ function df_hide_existing_comments($comments) {
     return $comments;
 }
 add_filter('comments_array', 'df_hide_existing_comments', 10, 2);
+
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'  => 'Theme Settings',
+        'menu_title'  => 'Theme Settings',
+        'menu_slug'   => 'theme-settings',
+        'capability'  => 'edit_posts',
+        'redirect'    => false
+    ));
+}

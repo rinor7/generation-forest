@@ -7,75 +7,9 @@ include("includes/headers/default.php");
 
 <?php get_template_part('includes/blocks/block-banner-one', null, array()); ?>
 
+<?php get_template_part('includes/blocks/block-accordions-one', null, array()); ?>
 
-Lorem Ipsum
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-
-
+<?php get_template_part('includes/blocks/block-form-one', null, array()); ?>
 
 </main>
 
