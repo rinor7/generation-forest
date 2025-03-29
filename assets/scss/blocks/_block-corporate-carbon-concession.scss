@@ -1,0 +1,112 @@
+.corporate-carbon-concession__section {    
+    .container {
+        @include xs {
+            padding: 0;
+        }
+    }
+    .inner-wrapper {
+        background: var(--colorPrimary, #235145);
+        border-radius: 24px;
+        overflow: hidden;
+        @include xs {
+            border-radius: 0;
+        }
+        .row {
+            @include md {
+                flex-direction: column-reverse;
+            }
+            .left-side {
+                flex-shrink: 0; 
+                width: 445px;
+                &-wrapper {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    .content {
+                        padding: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24px;
+                        @include md {
+                            padding: 16px;
+                            row-gap: 16px;
+                        }
+                        h2 {
+                            color: var(--Base-colorWhite, #FFF);
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 110%; /* 44px */
+                            @include md {
+                                font-size: 35px;
+                            }
+                            @include xs {
+                                font-size: 30px;
+                            }
+                        }
+                        p {
+                            color: var(--Base-colorWhite, #FFF);
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            @include xs {
+                                font-size: 16px;
+                            }
+                        }
+                        .btn-base-one {
+                            a {
+                                @include default-white-btn;
+                                padding: 0 16px;
+                                width: fit-content;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-side {   
+                border-radius: 24px;
+                position: relative;
+                flex: 1;
+                .image-content {
+                    padding: 100px 40px 100px 20px;
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover; 
+                    background-position: center; 
+                    // background-attachment: fixed; 
+                    @include md {
+                        padding: 100px 16px 100px 16px;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .content {
+                        h3 {
+                            max-width: 600px;
+                            margin-left: auto;
+                            color: var(--Base-colorWhite, #FFF);
+                            text-align: right;
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%; /* 44px */
+                            @include md {
+                                font-size: 30px;
+                            }
+                            @include xs {
+                                font-size: 24px;
+                            }
+                            strong {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

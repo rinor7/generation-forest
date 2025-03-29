@@ -3,78 +3,27 @@
 include("includes/headers/default.php"); 
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main site-main-seperator">
 
 <?php get_template_part('includes/blocks/block-banner-one', null, array()); ?>
 
 
-Lorem Ipsum
-<h1>
-Lorem Ipsum
+<?php get_template_part('includes/blocks/block-our-concept', null, array()); ?>
 
 
-</h1>
-<h1>
-Lorem Ipsum
+<?php get_template_part('includes/blocks/block-tree', null, array()); ?>
 
 
-</h1>
-<h1>
-Lorem Ipsum
+<?php get_template_part('includes/blocks/block-impact-boxes', null, array()); ?>
 
 
-</h1>
-<h1>
-Lorem Ipsum
+<?php get_template_part('includes/blocks/block-corporate-carbon-concession', null, array()); ?>
 
 
-</h1>
-<h1>
-Lorem Ipsum
+<?php get_template_part('includes/blocks/block-our-projects', null, array()); ?>
 
 
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-<h1>
-Lorem Ipsum
-
-
-</h1>
-
+<?php get_template_part('includes/blocks/block-accordions-one', null, array()); ?>
 
 
 </main>

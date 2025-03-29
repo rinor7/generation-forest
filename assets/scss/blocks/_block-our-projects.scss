@@ -1,0 +1,133 @@
+/* Boxes with post type and swiper style Start */
+.our-projects__section {
+    padding: 40px 0;
+    .container {
+        @include sm{
+            padding: 0;
+        }
+    }
+    .mySwiper-our-projects {
+        @include sm{
+            overflow: unset;
+            padding-right: 16px;
+                padding-left: 16px;
+            .swiper-wrapper {
+                // padding-right: 16px;
+                // padding-left: 16px;
+            }
+        }
+        .slider-wrap {
+            justify-content: flex-end;
+            flex-direction: column;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            background: var(--colorLightGray, #F1F1E8);
+            border-radius: 16px;
+            overflow: hidden;
+            .content {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                margin-bottom: 50px;
+                padding: 16px;
+                h2 {
+                    color: var(--Base-colorBlack, #000);
+                    font-size: 20px;
+                    text-align: left;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 30px;
+                }
+    
+                p {
+                    color: var(--Base-colorBlack, #000);
+                    text-align: left;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-style: normal;
+                    font-weight: 300;
+                }
+            }
+            .img {
+                width: 100%;
+                height: 280px;
+                position: relative;
+                .permalink-btn {
+                    pointer-events: none;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    color: var(--colorWhite, #FFF);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    display: flex;
+                    column-gap: 6px;
+                    align-items: center;
+                    @include transition;
+                    &:after {
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 24px;
+                        height: 24px;
+                        content: "";
+                        @include transition;
+                        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12C21 9.61305 20.0518 7.32387 18.364 5.63604C16.6761 3.94821 14.3869 3 12 3Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L12 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L8 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>')!important;                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            } 
+        }
+    }
+    .swiper-button {
+        &-next {
+            width: 55px;
+            height: 55px;
+            background-repeat: no-repeat;
+            background-position: center;
+            right: -32px;
+            right: -15px;
+            // margin-top: -12px;
+            z-index: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="59" height="56" viewBox="0 0 59 56" fill="none"><path d="M29.4 7C26.5043 7 23.637 7.54318 20.9618 8.59853C18.2866 9.65388 15.8558 11.2007 13.8083 13.1508C11.7607 15.1008 10.1365 17.4158 9.02841 19.9636C7.92029 22.5115 7.34995 25.2422 7.34995 28C7.34995 30.7578 7.92029 33.4885 9.02841 36.0363C10.1365 38.5842 11.7607 40.8992 13.8082 42.8492C15.8558 44.7993 18.2866 46.3461 20.9618 47.4015C23.637 48.4568 26.5043 49 29.4 49C35.248 49 40.8565 46.7875 44.9917 42.8492C49.1268 38.911 51.4499 33.5695 51.45 28C51.45 22.4305 49.1268 17.089 44.9917 13.1508C40.8565 9.21249 35.248 7 29.4 7Z" fill="%2363755A"/><path d="M39.2 28.0003L29.4 18.667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M39.2 28L19.6 28" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M29.4 37.3333L39.2 28" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            @include lg {
+                right: -15px;
+            }
+            @include sm {
+                right: 0px;
+            }
+            &:after {
+                content: unset;
+            }
+        }
+        &-prev {
+            left: -32px;
+            left: -15px;
+            width: 55px;
+            height: 55px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotate(180deg);
+            // margin-top: -12px;
+            z-index: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="59" height="56" viewBox="0 0 59 56" fill="none"><path d="M29.4 7C26.5043 7 23.637 7.54318 20.9618 8.59853C18.2866 9.65388 15.8558 11.2007 13.8083 13.1508C11.7607 15.1008 10.1365 17.4158 9.02841 19.9636C7.92029 22.5115 7.34995 25.2422 7.34995 28C7.34995 30.7578 7.92029 33.4885 9.02841 36.0363C10.1365 38.5842 11.7607 40.8992 13.8082 42.8492C15.8558 44.7993 18.2866 46.3461 20.9618 47.4015C23.637 48.4568 26.5043 49 29.4 49C35.248 49 40.8565 46.7875 44.9917 42.8492C49.1268 38.911 51.4499 33.5695 51.45 28C51.45 22.4305 49.1268 17.089 44.9917 13.1508C40.8565 9.21249 35.248 7 29.4 7Z" fill="%2363755A"/><path d="M39.2 28.0003L29.4 18.667" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M39.2 28L19.6 28" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M29.4 37.3333L39.2 28" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            @include lg {
+                left: -15px;
+            }
+            @include sm {
+                left: 0px;
+            }
+            &:after {
+                content: unset;
+            }
+        }
+    }
+}
+
+/* Boxes with post type and swiper style END */

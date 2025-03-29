@@ -122,9 +122,38 @@ $(".navbar-collapse li a").on("click", function() {
 //   },
 // });
 
-var swiper = new Swiper(".mySwiper-boxes-section", {
-  slidesPerView: 1,
-  spaceBetween: 15,
+var swiper = new Swiper(".mySwiper-our-projects", {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  // loop: false,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    767.98: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    991.98: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-our-concept", {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
   loop: true,
   autoHeight: true,
   navigation: {
@@ -136,13 +165,13 @@ var swiper = new Swiper(".mySwiper-boxes-section", {
     clickable: true,
   },
   breakpoints: {
-    640: {
+    767.98: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    768: {
+    991.98: {
       slidesPerView: 3,
-      spaceBetween: 16,
+      spaceBetween: 8,
     },
     1024: {
       slidesPerView: 4,
@@ -154,43 +183,60 @@ var swiper = new Swiper(".mySwiper-boxes-section", {
 
 // change newsletter butto name when form submitted 
 document.addEventListener("DOMContentLoaded", function () {
-  let subscribeButton = document.getElementById("mc-embedded-subscribe");
-  let emailInput = document.getElementById("mce-EMAIL");
-  let successMessage = document.getElementById("mce-success-response");
-  let errorMessage = document.querySelector(".mce_inline_error"); // Original error message
+  // Mailchimp Form Elements
+  let mcForm = document.getElementById("mc-embedded-subscribe-form");
+  let mcButton = document.getElementById("mc-embedded-subscribe");
+  let mcEmailInput = document.getElementById("mce-EMAIL");
+  let mcSuccessMessage = document.getElementById("mce-success-response");
 
-  // Hide the original error message
-  if (errorMessage) {
-      errorMessage.style.display = "none";
-  }
+  // Contact Form 7 Elements
+  let cf7Forms = document.querySelectorAll(".wpcf7-form"); // Select all CF7 forms
+  let cf7Buttons = document.querySelectorAll(".wpcf7-submit"); // Select all CF7 submit buttons
 
-  // Form submission event
-  document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", function () {
-      setTimeout(() => {
-          // Check if there's an error (empty email field)
-          if (emailInput.classList.contains("mce_inline_error")) {
-              subscribeButton.value = "Email is required!";
-              subscribeButton.classList.add("error"); // Add error class
-              subscribeButton.classList.remove("success"); // Remove success class if exists
-          } else {
-              subscribeButton.classList.remove("error"); // Remove error class if fixed
-          }
-      }, 100); // Small delay to allow Mailchimp validation to run
-  });
+  // MAILCHIMP FORM HANDLING
+  if (mcForm) {
+      mcForm.addEventListener("submit", function () {
+          setTimeout(() => {
+              if (mcEmailInput.classList.contains("mce_inline_error")) {
+                  mcButton.value = "Email is required!";
+                  mcButton.classList.add("error");
+                  mcButton.classList.remove("success");
+              } else {
+                  mcButton.classList.remove("error");
+              }
+          }, 100);
+      });
 
-  // MutationObserver for success message
-  let observer = new MutationObserver(function (mutations) {
-      mutations.forEach(function () {
-          if (successMessage && successMessage.style.display === "block") {
-              subscribeButton.value = "Subscribed!";
-              subscribeButton.classList.add("success"); // Add success class
-              subscribeButton.classList.remove("error"); // Remove error class
-              subscribeButton.disabled = true; // Optional: Disable button on success
+      // Observer for Mailchimp success message
+      let mcObserver = new MutationObserver(function () {
+          if (mcSuccessMessage && mcSuccessMessage.style.display === "block") {
+              mcButton.value = "Subscribed!";
+              mcButton.classList.add("success");
+              mcButton.classList.remove("error");
+              mcButton.disabled = true;
           }
       });
-  });
 
-  if (successMessage) {
-      observer.observe(successMessage, { attributes: true, attributeFilter: ["style"] });
+      if (mcSuccessMessage) {
+          mcObserver.observe(mcSuccessMessage, { attributes: true, attributeFilter: ["style"] });
+      }
   }
+
+  // CONTACT FORM 7 HANDLING
+  cf7Forms.forEach(function (form, index) {
+      form.addEventListener("submit", function () {
+          setTimeout(() => {
+              let cf7Button = cf7Buttons[index]; // Get corresponding button
+              if (form.classList.contains("invalid")) {
+                  cf7Button.value = "Please check your details!";
+                  cf7Button.classList.add("error");
+                  cf7Button.classList.remove("success");
+              } else {
+                  cf7Button.classList.add("success");
+                  cf7Button.classList.remove("error");
+                  cf7Button.value = "Submitted!";
+              }
+          }, 100);
+      });
+  });
 });

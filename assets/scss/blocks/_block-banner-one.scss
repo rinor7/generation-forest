@@ -1,11 +1,70 @@
-.banner-one__section {
-    display: flex;
-    align-items: center;
-    min-height: 312px;
-    @media(min-width: 450px) {
-        min-height: 412px;
+
+.banner__section {
+    &>.container {
+        @include xs {
+            padding: 0;
+        }
     }
-    @media(min-width: 991.98px) {
-        min-height: 512px;
+    .banner-one__section {
+        display: flex;
+        align-items: center;
+        min-height: 576px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include min-xs {
+            border-radius: 0px 0px 24px 24px;
+        }
+        @include min-md {
+            min-height: 586px;
+        }
+        .centers {
+            display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+            @include md {
+                row-gap: 24px;
+            }
+            h1 {
+                color: var(--colorWhite, #FFF);
+                font-size: 64px;
+                font-style: normal;
+                text-align: center;
+                font-weight: 800;
+                line-height: 110%; /* 70.4px */
+                @include md {
+                    font-size: 58px;
+                }
+                @include sm {
+                    font-size: 42px;
+                }
+                @include xs {
+                    max-width: 355px;
+                    margin: auto;
+                }
+                strong {
+                    display: block;
+                    font-weight: 900;
+                }
+            }
+            .buttons {
+                display: flex;
+                column-gap: 16px;
+                justify-content: center;
+                .btn-base {
+                    position: relative;
+                    &.btn-base-one {
+                        a {
+                            @include default-white-btn;
+                        }
+                    }
+                    
+                    &.btn-base-two {
+                        a {
+                            @include default-transparent-btn;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

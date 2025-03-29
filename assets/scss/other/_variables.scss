@@ -17,6 +17,8 @@ $grey-color: #888;
     --Basic-colorWhite: #FFF;
     --Basic-colorBlack: #000;
 
+    --colorOffWhite: #FFFEFA;
+
     /* Neutral Shades */
     --Neutral-colorNeutral: #99a2aa;
     --Neutral-colorNeutralLight700: #e6e9eb;
@@ -36,6 +38,7 @@ $grey-color: #888;
   
     /* Grey */
     --Natural-colorGrey: #888888;
+    --colorLightGray: #F1F1E8;
   
     /* Light Grey Shades */
     --Natural-colorLightGrey100: #AAAAAA;
@@ -52,6 +55,7 @@ $grey-color: #888;
   
     /* Primary */
     --Natural-colorPrimary: #2BA28B;
+    --colorPrimary: #235145;
   
     /* Light Primary Shades */
     --Natural-colorLightPrimary100: #4AC6A2;
@@ -126,4 +130,104 @@ $grey-color: #888;
     }
 }
 
+
+@mixin default-white-btn {
+    color: var(--Basic-colorBlack, #000);
+    background: var(--Base-colorWhite, #FFF);
+    border: 1px solid transparent;
+    gap: 10px;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    @include transition;
+    @include md {
+        font-size: 14px;
+    }
+    @include sm {
+        font-size: 12px;
+        height: 40px;
+        padding: 0 16px;
+    }
+    @media (max-width: 389.98px) {
+        padding: 0 8px;
+    }
+    &:after {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        content: "";
+        @include transition;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12C21 9.61305 20.0518 7.32387 18.364 5.63604C16.6761 3.94821 14.3869 3 12 3Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L12 8" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L8 12" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    @include min-md {
+        &:hover {
+            border: 1px solid var(--Base-colorWhite, #FFF);
+            background: rgba(255, 255, 255, 0.25);
+            color: var(--Basic-colorWhite, #FFF);
+            &:after {
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12C21 9.61305 20.0518 7.32387 18.364 5.63604C16.6761 3.94821 14.3869 3 12 3Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L12 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L8 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>')!important;
+            }
+        }
+    }
+}
+
+@mixin default-transparent-btn {
+    border: 1px solid var(--Base-colorWhite, #FFF);
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--Basic-colorWhite, #FFF);
+    gap: 10px;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    @include transition;
+    @include md {
+        font-size: 14px;
+    }
+    @include sm {
+        font-size: 12px;
+        height: 40px;
+        padding: 0 16px;
+    }
+    @media (max-width: 389.98px) {
+        padding: 0 8px;
+    }
+    &:after {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        content: "";
+        @include transition;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12C21 9.61305 20.0518 7.32387 18.364 5.63604C16.6761 3.94821 14.3869 3 12 3Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L12 8" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L8 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    @include min-md {
+        &:hover {
+            color: var(--Basic-colorBlack, #000);
+            background: var(--Base-colorWhite, #FFF);
+            border: 1px solid transparent;
+            &:after {
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C14.3869 21 16.6761 20.0518 18.364 18.364C20.0518 16.6761 21 14.3869 21 12C21 9.61305 20.0518 7.32387 18.364 5.63604C16.6761 3.94821 14.3869 3 12 3Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L12 8" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12L8 12" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 16L16 12" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>')!important;
+            }
+        }
+    }
+}
 /* Variables END*/
