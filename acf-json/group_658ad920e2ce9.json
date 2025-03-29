@@ -1431,27 +1431,6 @@
                     "allow_null": 0
                 }
             ]
-        },
-        {
-            "key": "field_67e45c871438f",
-            "label": "test",
-            "name": "test",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "test",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -1472,5 +1451,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743019485
+    "modified": 1743019539
 }
