@@ -2,7 +2,7 @@
 $group_accordions = get_field('group_accordions');
 
 if (!($group_accordions['disable_section'] ?? false)): ?>
-<section class="accordion-section-one">
+<section class="accordions__section" aria-label="Accordions">
     <div class="container">
        <div class="inner-wrapper">
        <div class="row">

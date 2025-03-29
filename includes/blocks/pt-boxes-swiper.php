@@ -13,11 +13,11 @@
             <?php endif; ?>
         </div>
         <?php endif; ?>
-        <div class="swiper mySwiper mySwiper-boxes-section">
+        <div class="swiper mySwiper mySwiper-our-projects">
             <div class="swiper-wrapper">
                 <?php
                     $args = array(
-                        'post_type' => 'posttype',
+                        'post_type' => 'our-projects',
                         'posts_per_page' => -1,
                         'order' => 'ASC',
                     );

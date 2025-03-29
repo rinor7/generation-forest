@@ -2,7 +2,7 @@
 $group_banner = get_field('group_banner');
 
 if (!($group_banner['disable_section'] ?? false)): ?>
-<section class="banner__section ">
+<section class="banner__section" aria-label="Banner">
     <div class="container">
         <div class="banner-one__section"
             style="background-image: url(<?php echo esc_url($group_banner['image'] ?? ''); ?>);" aria-label="Banner">
@@ -16,7 +16,7 @@ if (!($group_banner['disable_section'] ?? false)): ?>
                             <div class="buttons">
                                 <?php if (!empty($group_banner['link1']) && !empty($group_banner['name1'])): ?>
                                     <div class="btn-base btn-base-one">
-                                        <a href="tel:<?php echo esc_attr($group_banner['link1']); ?>"><?php echo esc_html($group_banner['name1']); ?></a>
+                                        <a href="<?php echo esc_attr($group_banner['link1']); ?>"><?php echo esc_html($group_banner['name1']); ?></a>
                                     </div>
                                 <?php endif; ?>
 

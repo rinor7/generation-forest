@@ -122,9 +122,38 @@ $(".navbar-collapse li a").on("click", function() {
 //   },
 // });
 
-var swiper = new Swiper(".mySwiper-boxes-section", {
-  slidesPerView: 1,
-  spaceBetween: 15,
+var swiper = new Swiper(".mySwiper-our-projects", {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  // loop: false,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    767.98: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    991.98: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-our-concept", {
+  slidesPerView: 1.2,
+  spaceBetween: 16,
   loop: true,
   autoHeight: true,
   navigation: {
@@ -136,13 +165,13 @@ var swiper = new Swiper(".mySwiper-boxes-section", {
     clickable: true,
   },
   breakpoints: {
-    640: {
+    767.98: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    768: {
+    991.98: {
       slidesPerView: 3,
-      spaceBetween: 16,
+      spaceBetween: 8,
     },
     1024: {
       slidesPerView: 4,
