@@ -10,7 +10,7 @@ add_action('admin_init', 'remove_wp_block_menu', 100);
 // Disable Theme FileEditor from Appearance
 function disable_theme_file_editor() {
     if ( ! defined('DISALLOW_FILE_EDIT') ) {
-        define('DISALLOW_FILE_EDIT', true);
+        define('DISALLOW_FILE_EDIT', false);
     }
 }
 add_action('init', 'disable_theme_file_editor');
