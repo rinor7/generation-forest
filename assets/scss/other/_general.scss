@@ -127,6 +127,9 @@ h3 {
         }
         &.only-title {
             margin-bottom: 40px;
+            @include md {
+                margin-bottom: 24px;
+            }
         }
     }
     h3 {
