@@ -1,10 +1,17 @@
 /* Boxes with post type and swiper style Start */
 .our-concept__section {
+    &>.container {
+        @include xs {
+            padding: 0;
+        }
+    }
     .our-concept-wrapper {
         padding: 24px 100px;
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 24px;
+        @include min-xs {
+            border-radius: 24px;
+        }
         @include md {
             padding: 24px 0px;
             overflow: hidden;

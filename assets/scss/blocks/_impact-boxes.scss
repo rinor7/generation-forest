@@ -1,6 +1,10 @@
 /* Our Impact style Start */
 .our-impact__section {
-
+    .section-header {
+        .only-title {
+            margin-bottom: 40px;
+        }
+    }
     .row {
         row-gap: 20px;
     }
