@@ -34,6 +34,9 @@
             @include min-lg {
                 padding-left: 120px;
             }
+            @include min-xl {
+                padding-left: 150px;
+            }
             p {
                 color: var(--Base-colorBlack, #000);
                 font-size: 24px;
