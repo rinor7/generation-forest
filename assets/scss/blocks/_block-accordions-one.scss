@@ -3,6 +3,7 @@
         background: var(--colorLightGray, #F1F1E8);
         border-radius: 24px;
         overflow: hidden;
+        border: 1px solid var(--colorGravel, #D5CABA);
         .left-side {
             .image {
                 padding-right: 20px;
@@ -51,7 +52,7 @@
                     .accordion-header {
                         border-bottom: 2px solid transparent;
                         &[aria-expanded="false"] {
-                            border-bottom: 2px solid var(--Natural-colorLightGrey300, #A0A3A0);
+                            border-bottom: 2px solid var(--colorGravel, #D5CABA);;
                         }
                         button {
                             background: unset;

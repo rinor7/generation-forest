@@ -1,0 +1,50 @@
+.simple-textarea__section {
+    .row {
+        row-gap: 16px;
+    }
+    &-inner {
+        border-radius: 24px 24px 0px 0px;
+        backdrop-filter: blur(8.5px);
+        padding: 40px;
+        @include md {
+            padding: 16px;
+        }
+        &.gradient-from-bottom {
+            border-radius: 24px 24px 0px 0px;
+            background: linear-gradient(180deg, var(--colorLightGray, #F1F1E8) 50%, rgba(241, 241, 232, 0.00) 100%);
+        }
+        &.gradient-from-top {
+            border-radius: 0px 0px 24px 24px;
+            background: linear-gradient(360deg, var(--colorLightGray, #F1F1E8) 50%, rgba(241, 241, 232, 0.00) 100%);
+        }
+        .lefts {
+            h2 {
+                color: var(--Natural-colorDarkGrey500, #0C0D0C);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 50px;
+                @include md {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+            }
+        }
+        .rights {
+            p {
+                color: var(--Base-colorBlack, #000);
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 34px;
+                @include md {
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                strong {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

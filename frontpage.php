@@ -8,10 +8,16 @@ include("includes/headers/default.php");
 <?php get_template_part('includes/blocks/block-banner-one', null, array()); ?>
 
 
+<?php get_template_part('includes/blocks/block-simple-content', null, array()); ?>
+
+
 <?php get_template_part('includes/blocks/block-our-concept', null, array()); ?>
 
 
 <?php get_template_part('includes/blocks/block-tree', null, array()); ?>
+
+
+<?php get_template_part('includes/blocks/block-simple-content-second', null, array()); ?>
 
 
 <?php get_template_part('includes/blocks/block-impact-boxes', null, array()); ?>
