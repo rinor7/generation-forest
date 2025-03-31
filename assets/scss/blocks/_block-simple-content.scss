@@ -31,6 +31,9 @@
             }
         }
         .rights {
+            @include min-lg {
+                padding-left: 120px;
+            }
             p {
                 color: var(--Base-colorBlack, #000);
                 font-size: 24px;
