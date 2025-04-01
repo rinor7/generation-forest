@@ -89,9 +89,18 @@ function theme_custom_css() {
                 max-width: <?php echo get_theme_mod('container_max_width_medium_setting', 960); ?>px;
             }
         }
-        @media (min-width: 1200px) {
+        /* @media (min-width: 1200px) {
             .container {
                 max-width: <?php echo get_theme_mod('container_max_width_large_setting', 1140); ?>px;
+            }
+        } */
+        @media (max-width: 1920px) and (min-width: 1200px) {
+            .container {
+                /* max-width: <?php echo get_theme_mod('container_max_width_large_setting', 1140); ?>px; */
+                max-width: unset;
+                padding-right: 60px;
+                padding-left: 60px;
+                margin: 0;
             }
         }
     </style>
