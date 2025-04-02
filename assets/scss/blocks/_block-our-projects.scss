@@ -105,7 +105,7 @@
                 background: var(--Base-colorBlack, #000);
             }
         }
-        @include min-sm {
+        @media (min-width: 767.98px) {
             display: none;
         }
     }
@@ -152,7 +152,7 @@
             }
         }
         &-next, &-prev {
-            @include sm {
+            @media (max-width: 767.98px) {
                 display: none;
             }
         }
