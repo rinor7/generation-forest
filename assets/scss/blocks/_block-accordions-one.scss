@@ -4,19 +4,22 @@
         border-radius: 24px;
         overflow: hidden;
         border: 1px solid var(--colorGravel, #D5CABA);
+        .row {
+            @include md {
+                flex-direction: column-reverse;
+            }
+        }
         .left-side {
             .image {
-                padding-right: 20px;
                 height: 100%;
+                @include min-md {
+                    padding-right: 20px;
+                }
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                 }
-            }
-            @include md {
-                display: none;
-                visibility: hidden;
             }
         }
         .right-side {   
@@ -30,7 +33,7 @@
                     padding-right: 50px;
                 }
                 @include md {
-                    padding: 12px 12px 24px 12px;
+                    padding: 12px 12px 21px 12px;
                 }
                 .title {
                     color: var(--Base-colorBlack, #000);
