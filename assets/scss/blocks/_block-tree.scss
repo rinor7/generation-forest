@@ -13,6 +13,14 @@
                 height: auto;
             }
         }
+        .tree-text {
+            color: var(--Base-colorBlack, #000);
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+        }
     }
 }
 /* Tree style End */
