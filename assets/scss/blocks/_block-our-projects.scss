@@ -10,11 +10,8 @@
         @include sm{
             overflow: unset;
             padding-right: 16px;
-                padding-left: 16px;
-            .swiper-wrapper {
-                // padding-right: 16px;
-                // padding-left: 16px;
-            }
+            padding-left: 16px;
+            padding-bottom: 30px;
         }
         .slider-wrap {
             justify-content: flex-end;
@@ -97,6 +94,21 @@
             } 
         }
     }
+    .swiper-pagination {
+        bottom: 0px!important;
+        .swiper-pagination-bullet {
+            background: #AEAEAE;
+            width: 16px;
+            height: 1px;
+            &-active {
+                width: 24px;
+                background: var(--Base-colorBlack, #000);
+            }
+        }
+        @include min-sm {
+            display: none;
+        }
+    }
     .swiper-button {
         &-next {
             width: 55px;
@@ -137,6 +149,11 @@
             }
             &:after {
                 content: unset;
+            }
+        }
+        &-next, &-prev {
+            @include sm {
+                display: none;
             }
         }
     }
