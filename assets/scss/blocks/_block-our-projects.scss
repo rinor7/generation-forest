@@ -94,7 +94,21 @@
             } 
         }
     }
-    
+    .swiper-pagination {
+        bottom: 0px!important;
+        .swiper-pagination-bullet {
+            background: #AEAEAE;
+            width: 16px;
+            height: 1px;
+            &-active {
+                width: 24px;
+                background: var(--Base-colorBlack, #000);
+            }
+        }
+        @include min-sm {
+            display: none;
+        }
+    }
     .swiper-button {
         &-next {
             width: 55px;
@@ -144,19 +158,5 @@
         }
     }
 }
-.swiper-pagination {
-    bottom: 0px!important;
-    .swiper-pagination-bullet {
-        background: #AEAEAE;
-        width: 16px;
-        height: 1px;
-        &-active {
-            width: 24px;
-            background: var(--Base-colorBlack, #000);
-        }
-    }
-    @include min-sm {
-        display: none;
-    }
-}
+
 /* Boxes with post type and swiper style END */
