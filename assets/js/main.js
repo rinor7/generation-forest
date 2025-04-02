@@ -134,6 +134,7 @@ var swiper = new Swiper(".mySwiper-our-projects", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    dynamicBullets: true,
   },
   breakpoints: {
     767.98: {
@@ -149,6 +150,20 @@ var swiper = new Swiper(".mySwiper-our-projects", {
       spaceBetween: 16,
     },
   },
+});
+
+//change active bullet at same time with swiper
+const swipersAll = document.querySelectorAll(".swiper"); 
+
+swipersAll.forEach(swiperElement => {
+    let swiperInstance = swiperElement.swiper; // Get the Swiper instance
+
+    if (swiperInstance) {
+        swiperInstance.on('slideChange', function() {
+            swiperInstance.pagination.render();
+            swiperInstance.pagination.update();
+        });
+    }
 });
 
 var swiper = new Swiper(".mySwiper-our-concept", {
