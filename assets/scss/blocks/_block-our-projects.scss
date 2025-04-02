@@ -99,6 +99,7 @@
         .swiper-pagination-bullet {
             background: #AEAEAE;
             width: 16px;
+            transform: unset;
             height: 1px;
             &-active {
                 width: 24px;
