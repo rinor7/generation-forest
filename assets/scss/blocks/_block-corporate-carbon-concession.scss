@@ -56,10 +56,10 @@
                         }
                         .btn-base-one {
                             a {
-                                @include default-white-btn;
                                 padding: 0 16px;
                                 width: fit-content;
                                 font-size: 12px;
+                                @include default-white-btn;
                             }
                         }
                     }

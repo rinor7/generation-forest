@@ -48,6 +48,7 @@ header {
         }
         .menu-here {
             nav {
+                column-gap: 40px;
                 // padding-top: 0px;
                 // padding-bottom: 0px;
                 // padding-left: 0px;
@@ -55,12 +56,12 @@ header {
                 // column-gap: 100px;
                 .logo_header {
                     flex-shrink: 0;
-                    @include min-md {
-                        margin-right: 50px;
-                    }
-                    @include min-lg {
-                        margin-right: 100px;
-                    }
+                    // @include min-md {
+                    //     margin-right: 50px;
+                    // }
+                    // @include min-lg {
+                    //     margin-right: 100px;
+                    // }
                     li {
                         height: 48px;
                         max-width: 110px;
@@ -149,10 +150,14 @@ header {
                     }
 
                     .navbar-nav {
-                        column-gap: 50px;
+                        column-gap: 60px;
                         width: 100%;
                         flex-wrap: wrap;
                         row-gap: 16px;
+                        justify-content: center;
+                        @include min-md {
+                            margin-left: -110px;
+                        }
                         @include xs {
                             text-align: left;
                             padding-right: calc(var(--bs-gutter-x)* .5);
