@@ -61,8 +61,10 @@
                     width: calc(100% - 32px);
                     height: 100%;
                     text-align: left;
+                    align-items: center;
                     @include md {
                         padding: 24px;
+                        align-items: flex-start;
                     }
                 }
                 .icon {
