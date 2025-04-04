@@ -1,0 +1,18 @@
+/* Company Structure style Start */
+.company-structure__section {
+    &-inner {
+        .company-structure-background {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            max-height: 1000px;
+            img {
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+                height: auto;
+            }
+        }
+    }
+}
+/* Company Structure style End */

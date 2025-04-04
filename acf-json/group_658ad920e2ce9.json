@@ -100,6 +100,52 @@
                     "preview_size": "medium"
                 },
                 {
+                    "key": "field_67f04fd71e9e9",
+                    "label": "Set Min-Height for Mobile",
+                    "name": "min_height_mobile",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 586,
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_67f0502f1e9ea",
+                    "label": "Set Min-Height for Desktop",
+                    "name": "min_height_desktop",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 576,
+                    "min": "",
+                    "max": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_65aa43acb8cd4",
                     "label": "Content",
                     "name": "",
@@ -3460,5 +3506,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1743714208
+    "modified": 1743804859
 }

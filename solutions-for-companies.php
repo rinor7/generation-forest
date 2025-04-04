@@ -2,7 +2,7 @@
 include("includes/headers/default.php"); 
 ?>
 
-<main id="primary" class="site-solutions-for-companies">
+<main id="primary" class="site-solutions-for-companies site-main-seperator">
     
 <?php get_template_part('includes/blocks/block-banner-two', null, array()); ?>
 

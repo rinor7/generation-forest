@@ -1,23 +1,21 @@
 <?php 
-$group_banner = get_field('group_banner-two');
+$group_banner = get_field('group_banner-three');
 
 if (!($group_banner['disable_section'] ?? false)): ?>
-<section class="banner__section-full" aria-label="Banner">
+<section class="banner__section-three" aria-label="Banner">
     <div class="container">
-        <div class="banner-two__section"
-            style="background-image: url(<?php echo esc_url($group_banner['image'] ?? ''); ?>);" aria-label="Banner">
-            <div class="container">
+        <div class="banner-three__section" aria-label="Banner">
                 <div class="row">
                     <div class="centers col-lg-12">
                         <?php if (!empty($group_banner['for_companies'])) : ?>
                             <span class="paragraph"><?php echo strip_tags($group_banner['for_companies']); ?></span>
                         <?php endif; ?>
                         <?php if (!empty($group_banner['title'])) : ?>
-                            <h1><?php echo strip_tags($group_banner['title']); ?></h1>
+                            <h2><?php echo $group_banner['title']; ?></h2>
                         <?php endif; ?>
 
                         <?php if (!empty($group_banner['subtitle'])) : ?>
-                            <p><?php echo strip_tags($group_banner['subtitle']); ?></p>
+                            <div class="text"><?php echo wp_kses_post($group_banner['subtitle']); ?></div>
                         <?php endif; ?>
                         <div class="bottomside">
                             <?php if ((!empty($group_banner['link1']) && !empty($group_banner['name1'])) || (!empty($group_banner['link2']) && !empty($group_banner['name2']))): ?>
@@ -39,7 +37,6 @@ if (!($group_banner['disable_section'] ?? false)): ?>
 
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>

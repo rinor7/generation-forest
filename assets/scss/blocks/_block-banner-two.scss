@@ -6,15 +6,11 @@
     //     }
     // }
     background: var(--colorPrimary, #235145);
-    .banner-one__section {
+    .banner-two__section {
         display: flex;
         align-items: center;
-        min-height: 576px;
         background-repeat: no-repeat;
         background-size: cover;
-        @include min-md {
-            min-height: 586px;
-        }
         .centers {
             display: flex;
             flex-direction: column;

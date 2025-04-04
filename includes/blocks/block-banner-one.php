@@ -1,11 +1,30 @@
 <?php 
 $group_banner = get_field('group_banner');
 
-if (!($group_banner['disable_section'] ?? false)): ?>
+if (!($group_banner['disable_section'] ?? false)):
+
+    // Default to desktop height
+    $min_height = $group_banner['min_height_desktop'] ?? '';
+
+    // If mobile, use mobile height
+    if (wp_is_mobile() && !empty($group_banner['min_height_mobile'])) {
+        $min_height = $group_banner['min_height_mobile'];
+    }
+
+    // Make sure it ends with px if it's numeric
+    if (is_numeric($min_height)) {
+        $min_height .= 'px';
+    }
+
+    $background_image = esc_url($group_banner['image'] ?? '');
+    $style_attr = "background-image: url('{$background_image}');";
+    if (!empty($min_height)) {
+        $style_attr .= " min-height: {$min_height};";
+    }
+?>
 <section class="banner__section" aria-label="Banner">
     <div class="container">
-        <div class="banner-one__section"
-            style="background-image: url(<?php echo esc_url($group_banner['image'] ?? ''); ?>);" aria-label="Banner">
+        <div class="banner-one__section" style="<?php echo esc_attr($style_attr); ?>" aria-label="Banner">
             <div class="container">
                 <div class="row">
                     <div class="centers col-lg-12">

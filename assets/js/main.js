@@ -152,6 +152,44 @@ var swiper = new Swiper(".mySwiper-our-projects", {
   },
 });
 
+var swiper = new Swiper(".mySwiper-our-team", {
+  slidesPerView: 1.5,
+  spaceBetween: 16,
+  // loop: false,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    575.98: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    767.98: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    991.98: {
+      slidesPerView: 4.7,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 5.7,
+      spaceBetween: 24,
+    },
+  },
+});
+
 //change active bullet at same time with swiper
 const swipersAll = document.querySelectorAll(".swiper"); 
 

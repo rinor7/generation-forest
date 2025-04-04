@@ -2,7 +2,7 @@
 include("includes/headers/default.php"); 
 ?>
 
-	<main id="primary" class="site-default">
+	<main id="primary" class="site-default site-main-seperator">
 
 		<div class="container">
 			<?php the_content(); ?>

@@ -2,7 +2,7 @@
 include("includes/headers/default.php"); 
 ?>
 
-<main id="primary" class="site-blog">
+<main id="primary" class="site-blog site-main-seperator">
     
     <?php include("includes/blocks/blogs.php"); ?>
 

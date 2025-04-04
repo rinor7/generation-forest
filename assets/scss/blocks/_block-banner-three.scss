@@ -1,0 +1,102 @@
+
+.banner__section-three {
+    // &>.container {
+    //     @include xs {
+    //         padding: 0;
+    //     }
+    // }
+    .banner-three__section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0px;
+        border-radius: 24px;
+        background: linear-gradient(101deg, #548A78 0%, var(--colorPrimary, #235145) 58.15%);
+        @include md {
+            padding: 24px;
+        }
+        .centers {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            @include md {
+                row-gap: 12px;
+            }
+            .paragraph {
+                color: var(--colorWhite, #FFF);
+                font-size: 24px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 32px; /* 133.333% */
+            }
+            h2 {
+                p {
+                    color: var(--colorWhite, #FFF);
+                    font-size: 40px;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 50px;
+                    max-width: 920px;
+                    margin: auto;
+                    @include md {
+                        font-size: 36px;
+                        line-height: 46px;
+                    }
+                    @include sm {
+                        font-size: 24px;
+                        line-height: 34px;
+                    }
+                    @include xs {
+                        max-width: 355px;
+                        margin: auto;
+                    }
+                    strong {
+                        // display: block;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .text {
+                color: var(--colorWhite, #FFF);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                display: flex;
+                font-weight: 400;
+                line-height: 26px;
+                max-width: 520px;
+                margin: auto;
+                margin-top: 8px;
+                strong {
+                    font-weight: 700;
+                }
+            }
+            .bottomside {
+                @include md {
+                    margin-top: 16px;
+                }
+                .buttons {
+                    display: flex;
+                    column-gap: 16px;
+                    justify-content: center;
+                    .btn-base {
+                        position: relative;
+                        &.btn-base-one {
+                            a {
+                                @include default-white-btn;
+                            }
+                        }
+                        
+                        &.btn-base-two {
+                            a {
+                                @include default-transparent-btn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

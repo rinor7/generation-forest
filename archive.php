@@ -2,7 +2,7 @@
 include("includes/headers/default.php"); 
 ?>
 
-<main id="primary" class="site-archive archive-page">
+<main id="primary" class="site-archive archive-page site-main-seperator">
     <div class="container">
         <div class="archive-content">
         <?php if (have_posts()) : ?>

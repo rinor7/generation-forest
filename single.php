@@ -2,7 +2,7 @@
 include("includes/headers/default.php"); 
 ?>
 
-	<main id="primary" class="site-single single-page">
+	<main id="primary" class="site-single single-page site-main-seperator">
 
 	
 	<div class="intro">
