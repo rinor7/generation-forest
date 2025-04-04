@@ -169,7 +169,7 @@ swipersAll.forEach(swiperElement => {
 var swiper = new Swiper(".mySwiper-our-concept", {
   slidesPerView: 1.2,
   spaceBetween: 16,
-  loop: true,
+  loop: false,
   autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -185,11 +185,11 @@ var swiper = new Swiper(".mySwiper-our-concept", {
       spaceBetween: 15,
     },
     991.98: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 8,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 16,
     },
   },

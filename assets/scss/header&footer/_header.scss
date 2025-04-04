@@ -176,6 +176,22 @@ header {
             }
         }
     }
+    &.solutions-for-companies-header:not(.shadow-header) {
+        background-color: #235145;
+        .menu-here {
+            nav {
+                .main-nav-toggle {
+                    ul {
+                        li {
+                            a {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     &.shadow-header {
         height: 75px;
         @include min-md {

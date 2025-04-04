@@ -2,8 +2,12 @@
 
 function standard_widgets_init() {
 	register_sidebar(
-		array('name'          => esc_html__( 'Widget 1', 'standard' ),
+		array('name'          => esc_html__( 'Dark Logo', 'standard' ),
 			'id'            => 'widget-1',)
+	);
+	register_sidebar(
+		array('name'          => esc_html__( 'Light Logo', 'standard' ),
+			'id'            => 'widget-1-light',)
 	);
 	register_sidebar(
 		array('name'          => esc_html__( 'Footer Newsletter', 'standard' ),

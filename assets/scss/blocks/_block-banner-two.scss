@@ -1,0 +1,89 @@
+
+.banner__section-full {
+    // &>.container {
+    //     @include xs {
+    //         padding: 0;
+    //     }
+    // }
+    background: var(--colorPrimary, #235145);
+    .banner-one__section {
+        display: flex;
+        align-items: center;
+        min-height: 576px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include min-md {
+            min-height: 586px;
+        }
+        .centers {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            @include md {
+                row-gap: 12px;
+            }
+            .paragraph {
+                color: var(--colorWhite, #FFF);
+                font-size: 24px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 32px; /* 133.333% */
+            }
+            h1 {
+                color: var(--colorWhite, #FFF);
+                font-size: 40px;
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%; /* 70.4px */
+                max-width: 650px;
+                margin: auto;
+                @include md {
+                    font-size: 36px;
+                }
+                @include sm {
+                    font-size: 30px;
+                }
+                @include xs {
+                    max-width: 355px;
+                    margin: auto;
+                }
+                strong {
+                    display: block;
+                    font-weight: 900;
+                }
+            }
+            p {
+                color: var(--colorWhite, #FFF);
+                text-align: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 133.333% */
+                max-width: 650px;
+                margin: auto;
+                margin-top: 8px;
+            }
+            .buttons {
+                display: flex;
+                column-gap: 16px;
+                justify-content: center;
+                .btn-base {
+                    position: relative;
+                    &.btn-base-one {
+                        a {
+                            @include default-white-btn;
+                        }
+                    }
+                    
+                    &.btn-base-two {
+                        a {
+                            @include default-transparent-btn;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -12,9 +12,12 @@
         @include min-xs {
             border-radius: 24px;
         }
-        @include md {
+        @include lg {
             padding: 24px 0px;
             overflow: hidden;
+        }
+        @include md {
+            
         }
         .container {
             @include md{
@@ -30,7 +33,7 @@
             }
         }
         .swiper {
-            @include md{
+            @include lg{
                 overflow: unset;
                 padding-right: 16px;
                 padding-left: 16px;
@@ -80,6 +83,7 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: 110%; /* 16.5px */
+                    text-align: center;
                     @include md {
                         font-size: 20px;
                     }
