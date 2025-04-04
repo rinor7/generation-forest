@@ -101,6 +101,7 @@
             width: 16px;
             transform: unset;
             height: 1px;
+            border-radius: unset;
             &-active {
                 width: 24px;
                 background: var(--Base-colorBlack, #000);
