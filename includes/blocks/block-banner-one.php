@@ -11,8 +11,9 @@ if (!($group_banner['disable_section'] ?? false)): ?>
                     <div class="centers col-lg-12">
                         <h1><?php echo $group_banner['title'] ?? ''; ?></h1>
 
-                        <div class="bottomside">
+                       
                             <?php if ((!empty($group_banner['link1']) && !empty($group_banner['name1'])) || (!empty($group_banner['link2']) && !empty($group_banner['name2']))): ?>
+                            <div class="bottomside">
                             <div class="buttons">
                                 <?php if (!empty($group_banner['link1']) && !empty($group_banner['name1'])): ?>
                                     <div class="btn-base btn-base-one">
@@ -26,8 +27,9 @@ if (!($group_banner['disable_section'] ?? false)): ?>
                                     </div>
                                 <?php endif; ?>
                             </div>
+                            </div>
                             <?php endif; ?>
-                        </div>
+                        
 
                     </div>
                 </div>
