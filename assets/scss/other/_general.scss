@@ -145,9 +145,9 @@ h3 {
     flex-direction: column;
     row-gap: 60px;
     margin-bottom: 60px;
-    @include md {
-        margin-bottom: 40px;
-        row-gap: 40px;
-    }
+    // @include md {
+    //     margin-bottom: 40px;
+    //     row-gap: 40px;
+    // }
 }
 /* General style END*/
