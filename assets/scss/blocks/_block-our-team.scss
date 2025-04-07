@@ -3,6 +3,24 @@
     overflow: hidden;
     .swiper {
         overflow: unset;
+        @include xs {
+            .swiper-wrapper {
+                height: auto !important;
+                transform: unset !important;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                column-gap: 16px;
+                row-gap: 24px;
+                .swiper-slide {
+                    margin-right: 0!important;
+                    transform: unset !important;
+                    width: calc(50% - 16px) !important;
+                    .img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
         .team__boxes-section-wrap {
             justify-content: flex-end;
             flex-direction: column;

@@ -1,0 +1,73 @@
+/* Block Ecosystem Start */
+
+.ecosystem__section {
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .row {
+            padding: 40px 0;
+            border-top: var(--colorForestGreen, #235145) 1px solid;
+            &:last-of-type {
+                border-bottom: var(--colorForestGreen, #235145) 1px solid;
+            }
+            @include md {
+                row-gap: 40px;
+            }
+            .leftside {
+                h2 {
+                    color: var(--colorPrimary, #235145);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: 30px;
+                    text-transform: uppercase;
+                    @include md {
+                        font-size: 24px;
+                        line-height: 34px;
+                    }
+                    @include xs {
+                        text-align: center;
+                    }
+                }
+            }
+            .rightside {
+                @include min-md {
+                    padding-left: 40px;
+                }
+                p {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                    @include md {
+                        gap: 32px;
+                    }
+                    @include sm {
+                        gap: 50px;
+                    }
+                    @include xs {
+                        column-gap: 20px;
+                        row-gap: 50px;
+                        justify-content: space-between;
+                    }
+                    img {
+                        width: calc(20% - 32px);
+                        max-width: 100%;
+                        max-height: 40px;
+                        object-fit: contain;
+                        object-position: center;
+                        display: block;
+                        @include sm {
+                            width: calc(33% - 32px);
+                        }
+                        @include xs {
+                            width: calc(50% - 20px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Block Ecosystem style END */

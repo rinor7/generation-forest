@@ -12,6 +12,8 @@ include("includes/headers/default.php");
 
 <?php get_template_part('includes/blocks/block-our-team', null, array()); ?>
 
+<?php get_template_part('includes/blocks/block-ecosystem', null, array()); ?>
+
 <?php get_template_part('includes/blocks/block-banner-three', null, array()); ?>
 
 </main>
