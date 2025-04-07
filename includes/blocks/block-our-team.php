@@ -58,11 +58,11 @@
             $group_field_values = get_field('our-team-cat-seperate', get_the_ID()); // Assuming you're inside the loop
             if ($group_field_values): ?>
         <div class="section-header">
-            <?php if ($group_field_values['section_title']): ?>
-            <h2><?php echo esc_html($group_field_values['section_title']); ?></h2>
+            <?php if ($group_field_values['section_title2']): ?>
+            <h2><?php echo esc_html($group_field_values['section_title2']); ?></h2>
             <?php endif; ?>
-            <?php if ($group_field_values['section_subtitle']): ?>
-            <h3><?php echo esc_html($group_field_values['section_subtitle']); ?></h3>
+            <?php if ($group_field_values['section_subtitle2']): ?>
+            <h3><?php echo esc_html($group_field_values['section_subtitle2']); ?></h3>
             <?php endif; ?>
         </div>
         <?php endif; ?>
