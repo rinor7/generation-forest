@@ -86,12 +86,16 @@
                         &.btn-base-one {
                             a {
                                 @include default-white-btn;
+                                height: 40px;
+                                font-size: 12px;
                             }
                         }
                         
                         &.btn-base-two {
                             a {
                                 @include default-transparent-btn;
+                                height: 40px;
+                                font-size: 12px;
                             }
                         }
                     }
