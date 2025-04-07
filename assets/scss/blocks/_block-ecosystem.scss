@@ -38,12 +38,13 @@
                 p {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 16px;
+                    column-gap: 16px;
+                    row-gap: 40px;
                     @include md {
-                        gap: 32px;
+                        column-gap: 32px;
                     }
                     @include sm {
-                        gap: 50px;
+                        column-gap: 50px;
                     }
                     @include xs {
                         column-gap: 20px;
