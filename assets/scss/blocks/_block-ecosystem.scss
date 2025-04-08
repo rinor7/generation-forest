@@ -53,24 +53,23 @@
                     }
                     a {
                         display: flex;
-                        height: 100%;
+                        height: auto;
                         width: calc(20% - 32px);
                         max-width: 100%;
                         max-height: 45px;
                         justify-content: center;
+                        @include sm {
+                            width: calc(33% - 32px);
+                        }
+                        @include xs {
+                            max-height: 40px;
+                            width: calc(50% - 20px);
+                        }
                         img {
-                            max-width: 100%;
-                            max-height: 45px;
+                            width: 100%;
+                            height: 100%;
                             object-fit: contain;
                             object-position: center;
-                            display: block;
-                            @include sm {
-                                width: calc(33% - 32px);
-                            }
-                            @include xs {
-                                max-height: 40px;
-                                width: calc(50% - 20px);
-                            }
                         }
                     }
                 }
