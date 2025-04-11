@@ -16,6 +16,9 @@ include("includes/headers/default.php");
 
 <?php get_template_part('includes/blocks/block-banner-three', null, array()); ?>
 
+<?php get_template_part('includes/blocks/block-corporate-carbon-concession', null, array()); ?>
+
+
 </main>
 
 <?php include("includes/footers/default.php"); ?>
