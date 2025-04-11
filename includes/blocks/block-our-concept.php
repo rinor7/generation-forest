@@ -36,7 +36,7 @@
                     <div class="swiper-wrapper">
                         <?php 
                         // Loop through the 4 slides using the fields inside the 'concept-group' field
-                        for ($i = 1; $i <= 5; $i++): 
+                        for ($i = 1; $i <= 4; $i++): 
                             // Access each slide's subtitle, title, and image dynamically
                             $subtitle = $impact_group_values["sub{$i}"];
                             $title = $impact_group_values["title{$i}"];

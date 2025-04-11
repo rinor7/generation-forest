@@ -222,12 +222,8 @@ var swiper = new Swiper(".mySwiper-our-concept", {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    991.98: {
-      slidesPerView: 4,
-      spaceBetween: 8,
-    },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 16,
     },
   },
