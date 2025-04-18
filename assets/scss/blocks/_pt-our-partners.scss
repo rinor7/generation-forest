@@ -1,0 +1,37 @@
+/* Our Partners Start */
+.slider__partners-section {
+    .mySwiper-our-partners {
+        padding: 0 16px;
+        margin-top: 60px;
+        @include md {
+            margin-top: 40px;
+        }
+        .swiper-slide {
+            max-width: calc(100% / 2.2);
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include min-sm {
+                max-width: calc(100% / 4);
+            }
+            @include min-md {
+                max-width: calc(100% / 5);
+            }
+            @include min-size-1024 {
+                max-width: calc(100% / 7.1);
+            }
+            .slider-wrap {
+                .img {
+                    height: 30px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Our Partners style END */

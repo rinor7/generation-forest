@@ -1,0 +1,98 @@
+
+.banner__section-four {
+    .banner-four__section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        border-radius: 24px;
+        background: linear-gradient(90deg, var(--colorViridian, #427F70) 0%, var(--Secondary-colorLightSecondary200, #88A79E) 100%);
+        @include md {
+            padding: 24px;
+        }
+       .row {
+        @include sm {
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        .left-side {
+            width: 415px;
+            flex-shrink: 0;
+            position: relative;
+            padding: 0;
+            @include sm {
+                text-align: center;
+                width: 100%;
+            }
+            h2 {
+                p {
+                    color: var(--Base-colorWhite, #FFF);
+                    text-align: left;
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 110%; /* 44px */
+                    @include sm {
+                        text-align: center;
+                        font-size: 24px;
+                    }
+                }
+            }
+           }
+           .right-side {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 42px;
+            border-radius: 24px;
+            position: relative;
+            flex: 1;
+            @include sm {
+                row-gap: 40px;
+            }
+            .text {
+                p {
+                    color: var(--Base-colorWhite, #FFF);
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    @include sm {
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+            .bottomside {
+                .buttons {
+                    display: flex;
+                    column-gap: 16px;
+                    justify-content: left;
+                    @include sm {
+                        justify-content: center;
+                    }
+                    @include xs {
+                        width: 100%;
+                    }
+                    .btn-base {
+                        position: relative;
+                        @include xs {
+                            width: 100%;
+                        }
+                        &.btn-base-one {
+                            a {
+                                @include default-white-btn;
+                                height: 40px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+           }
+       }
+    }
+}

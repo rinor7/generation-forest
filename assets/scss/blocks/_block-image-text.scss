@@ -1,10 +1,11 @@
 /* Image - Text style Start */
 .two-side__section-image-text {
-    background-color: rgb(99, 73, 73);
-    padding: 20px 0;
 
     .row {
         row-gap: 40px;
+        @include md {
+            row-gap: 24px;
+        }
     }
 
     .lefts {
@@ -12,7 +13,9 @@
 
         .img {
             width: 100%;
-            height: 300px;
+            height: 380px;
+            border-radius: 16px;
+            overflow: hidden;
             @include min-md { 
                 height: 400px;
             }
@@ -26,16 +29,44 @@
 
     .rights {
         align-self: center;
+        @include min-size-1024 {
+            padding-left: 100px;
+        }
+        .up-content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            h2 {
+                color: var(--Natural-colorDarkGrey500, #0C0D0C);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%; /* 44px */
+                @include md {
+                    font-size: 34px;
+                }
+            }
+            h3 {
+                color: var(--Base-colorBlack, #000);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 125% */
+            }
+        }
         .buttons {
             display: flex;
             column-gap: 20px;
             flex-wrap: wrap;
             row-gap: 10px;
-
-            .two-btns {
-                display: flex;
-                flex-direction: column;
-                row-gap: 15px;
+            .default-btn, a {
+                @include xs {
+                    width: 100%
+                }
+            }
+            a {
+                @include default-grey-btn;
+                height: 55px!important;
             }
         }
     }

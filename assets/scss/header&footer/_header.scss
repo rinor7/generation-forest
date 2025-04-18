@@ -1,4 +1,12 @@
 /* Header Default*/
+.admin-bar {
+    header {
+        top: 32px;
+        #navbarNav {
+            top: calc(78px + 32px)!important;
+        }
+    }
+}
 
 //It should have same number as header height
 #primary {
@@ -180,11 +188,45 @@ header {
         background-color: #235145;
         .menu-here {
             nav {
-                .main-nav-toggle {
+                a {
                     ul {
-                        li {
-                            a {
-                                color: $white;
+                        li:last-child {
+                            @media(max-width: 991.98px) {
+                                display: none!important;
+                            } 
+                        }
+            
+                        li:first-child {
+                            @media(max-width: 991.98px) {
+                                display: flex!important;
+                            }
+                        }
+                    }
+                }
+                @include min-md {
+                    .main-nav-toggle {
+                        ul {
+                            li {
+                                a {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+                nav {
+                    .menu-m {
+                        span {
+                            &:nth-child(1) {
+                                border-color: $white;
+                            }
+                    
+                            &:nth-child(2) {
+                                border-color: $white;
+                            }
+                    
+                            &:nth-child(3) {
+                                border-color: $white;
                             }
                         }
                     }
@@ -212,6 +254,27 @@ header {
                         top: 75px;
                         @include min-md {
                             top: 78px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navigation-collapsed {
+    .solutions-for-companies-header:not(.shadow-header) {
+        background: $white!important;
+        .menu-here {
+            nav {
+                a {
+                    ul {
+                        li:last-child {
+                            display: flex!important;
+                        }
+            
+                        li:first-child {
+                            display: none!important;
                         }
                     }
                 }

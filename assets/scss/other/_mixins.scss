@@ -20,6 +20,13 @@
     @media (min-width: 1200px) { @content; }
 }
 
+@mixin size-1024 {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin min-size-1024 {
+    @media (min-width: 1024px) { @content; }
+}
+
 @mixin md {
     @media (max-width: 991.98px) { @content; }
 }

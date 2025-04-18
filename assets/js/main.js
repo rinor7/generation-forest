@@ -23,6 +23,7 @@ var Menu = {
     Menu.el.menuTop.toggleClass('menu-top-click');
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
+    $('body').toggleClass('navigation-collapsed');
     }
     };
 Menu.init();
@@ -148,6 +149,22 @@ var swiper = new Swiper(".mySwiper-our-projects", {
     1024: {
       slidesPerView: 4,
       spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-our-partners", {
+  slidesPerView: 'auto',
+  spaceBetween: 30,  
+  breakpoints: {
+    575.98: {
+      spaceBetween: 40,
+    },
+    767.98: {
+      spaceBetween: 50,
+    },
+    991.98: {
+      spaceBetween: 60,
     },
   },
 });
