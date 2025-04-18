@@ -51,7 +51,8 @@
             if (is_front_page()) echo 'frontpage-header'; 
             elseif (is_single()) echo 'single-header'; 
             elseif (is_404()) echo '404-header'; 
-            elseif (is_page_template('solutions-for-companies.php')) echo 'solutions-for-companies-header'; 
+            elseif (is_page_template('solutions-for-companies.php')) echo 'green-header'; 
+            elseif (is_page_template('news-media.php')) echo 'green-header'; 
             else echo 'default-header'; 
             ?>">
             <div class="headerbar header-default" id="headerbar">
@@ -67,7 +68,7 @@
                     <div class="menu-here">
                         <nav class="navbar navbar-expand-lg navbar-light navbar-center" id="scroll-change">
 
-                           <?php if (is_page_template('solutions-for-companies.php')) : ?>
+                            <?php if ( is_page_template('solutions-for-companies.php') || is_page_template('news-media.php') ) : ?>
                                 <?php if (is_active_sidebar('widget-1-light')) : ?>
                                     <a aria-label="logo" class="logo_header" href="<?php echo esc_url(home_url('/')); ?>">
                                         <ul>

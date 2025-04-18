@@ -5,7 +5,7 @@ include("includes/headers/default.php");
 	<main id="primary" class="site-single single-page site-main-seperator">
 
 	
-	<div class="single-post">
+	<div class="single-blog-post">
         <div class="container">
 
 			<?php 

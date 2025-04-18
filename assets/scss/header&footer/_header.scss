@@ -184,7 +184,7 @@ header {
             }
         }
     }
-    &.solutions-for-companies-header:not(.shadow-header) {
+    &.green-header:not(.shadow-header) {
         background-color: #235145;
         .menu-here {
             nav {
@@ -263,7 +263,7 @@ header {
 }
 
 .navigation-collapsed {
-    .solutions-for-companies-header:not(.shadow-header) {
+    .green-header:not(.shadow-header) {
         background: $white!important;
         .menu-here {
             nav {

@@ -52,7 +52,7 @@
                             $loop->the_post();
                         ?>
                     <div class="swiper-slide">
-                        <!-- <a href="<?php the_permalink(); ?>"> -->
+                        <a href="<?php the_permalink(); ?>">
                         <div class="slider-wrap">
                             <div class="img">
                                 <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
@@ -65,7 +65,7 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- </a> -->
+                        </a>
                     </div>
                     <?php
                     endwhile;
