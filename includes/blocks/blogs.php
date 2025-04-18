@@ -31,15 +31,17 @@
         ?>
 
         <div class="col-lg-4">
-            <div class="blog-inner">
-            <div class="img">
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+           <a href="<?php the_permalink(); ?>">
+           <div class="blog-inner">
+                <div class="img">
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                </div>
+                <div class="content">
+                    <span>MARCH 27, 5:00 PM</span>
+                    <h2><?php the_title(); ?></h2>
+                </div>
             </div>
-            <div class="content">
-                <span>MARCH 27, 5:00 PM</span>
-                <h2><?php the_title(); ?></h2>
-            </div>
-            </div>
+           </a>
         </div>
 
         <?php
