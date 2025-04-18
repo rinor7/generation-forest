@@ -25,14 +25,7 @@ include("includes/headers/default.php");
 
 
 			<div class="post-date">
-			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) : the_post();
-					$last_updated = get_the_modified_date('j F Y');
-					echo $last_updated;
-				endwhile;
-			endif;
-			?>
+			<span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
 			</div>
 
 			<div class="content-post">

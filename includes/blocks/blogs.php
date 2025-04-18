@@ -37,8 +37,8 @@
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
                 </div>
                 <div class="content">
-                    <span>MARCH 27, 5:00 PM</span>
-                    <h2><?php the_title(); ?></h2>
+                <span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
+                <h2><?php the_title(); ?></h2>
                 </div>
             </div>
            </a>
