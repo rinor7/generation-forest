@@ -50,6 +50,9 @@
             @include min-lg {
                 padding-right: 50px;
             }
+            @include min-xl {
+                padding-right: 100px;
+            }
             @include sm {
                 row-gap: 40px;
             }
