@@ -35,18 +35,27 @@
                     ?>
                 <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>">
-                    <div class="slider-wrap">
-                        <div class="content">
-                            <h2><?php the_title(); ?></h2>
-                            <?php the_content(); ?>
+                        <div class="slider-wrap">
+
+                            <div class="content">
+                                <?php
+                                $badge = get_field('badge_status');
+                                if ($badge) : ?>
+                                    <div class="badge badge-<?php echo esc_attr($badge); ?>">
+                                        <?php echo ucfirst($badge); ?>
+                                    </div>
+                                <?php endif; ?>
+                                <h2><?php the_title(); ?></h2>
+                                <?php the_content(); ?>
+                            </div>
+
+                            <div class="img">
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                                <a class="permalink-btn" href="<?php the_permalink(); ?>">
+                                    Read more
+                                </a>
+                            </div>
                         </div>
-                        <div class="img">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
-                            <a class="permalink-btn" href="<?php the_permalink(); ?>">
-                            Read more
-                            </a>
-                        </div>
-                    </div>
                     </a>
                 </div>
                 <?php

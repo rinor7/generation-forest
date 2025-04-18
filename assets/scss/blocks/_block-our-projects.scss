@@ -38,6 +38,7 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 30px;
+                    padding-right: 50px;
                     @include md {
                         line-height: 28px;
                     }
@@ -52,6 +53,27 @@
                     font-weight: 300;
                     @include md {
                         line-height: 24px;
+                    }
+                }
+                .badge {
+                    right: 16px;
+                    top: 16px;
+                    position: absolute;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    border-radius: 8px;
+                    &.badge-no-badge {
+                        font-size: 0;
+                    }
+                    &.badge-idle {
+                        color: var(--Base-colorWhite, #FFF);
+                        background: var(--colorRobRoy, #E8CD7F);
+                    }
+                    &.badge-live {
+                        border-radius: 8px;
+                        background: var(--colorForestGreen, #63755A);
                     }
                 }
             }
