@@ -14,10 +14,12 @@ include("includes/headers/default.php");
 			if ($custom_image) : ?>
 				<div class="col-xl-12 img-thumb custom-img">
 					<img src="<?php echo esc_url($custom_image['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+					<h1><?php the_title(); ?></h1>
 				</div>
 			<?php else : ?>
 				<div class="col-xl-12 img-thumb default-thumb">
 					<?php the_post_thumbnail('full'); ?>
+					<h1><?php the_title(); ?></h1>
 				</div>
 			<?php endif; ?>
 
@@ -34,7 +36,6 @@ include("includes/headers/default.php");
 			</div>
 
 			<div class="content-post">
-				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</div>
 

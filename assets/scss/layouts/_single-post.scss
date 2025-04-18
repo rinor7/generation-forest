@@ -7,6 +7,7 @@
         border-radius: 8px;
         overflow: hidden;
         margin-top: 20px;
+        position: relative;
         @include md {
             height: 300px;
             margin-top: 10px;
@@ -20,18 +21,61 @@
             object-fit: cover;
             object-position: center center;
         }
+        h1 {
+            margin-top: 16px;
+            color: #fff;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 16px;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            padding: 20px 100px;
+            text-align: center;
+            @include md {
+                font-size: 24px;
+                padding: 16px 16px;
+                line-height: 30px;
+            }
+        }
     }
     .custom-img {
         height: 100%;
         border-radius: 8px;
         overflow: hidden;
         margin-top: 20px;
+        position: relative;
         @include md {
             margin-top: 10px;
         }
         img {
             object-fit: contain;
             border-radius: 0 0 8px 8px;
+        }
+        h1 {
+            margin-top: 16px;
+            color: #fff;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 16px;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            padding: 20px 100px;
+            text-align: center;
+            @include md {
+                font-size: 24px;
+                padding: 16px 16px;
+                line-height: 30px;
+            }
         }
     }
     .post-date {
@@ -43,19 +87,6 @@
         margin: 12px 0 0 0;
     }
     .content-post {
-        h1 {
-            margin-top: 16px;
-            color: #000;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 40px;
-            margin-bottom: 16px;
-            @include md {
-                font-size: 26px;
-                line-height: 30px;
-            }
-        }
         p {
             margin-bottom: 16px;
             font-size: 16px;
