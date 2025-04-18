@@ -152,6 +152,15 @@
                                 }
                             }
                         }
+                        .main-href {
+                            height: 100%;
+                            flex-shrink: 0;
+                            position: relative;
+                            @include md {
+                                width: 100%;
+                                height: 220px;
+                            }
+                        }
                         .img {
                             height: 100%;
                             flex-shrink: 0;

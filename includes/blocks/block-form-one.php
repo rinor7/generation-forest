@@ -11,7 +11,7 @@ $contact_form = get_field('contact_form_shortcode', 'option');
                 <img src="<?php echo esc_url($contact_bg['url']); ?>" alt="Contact Background" width="100%" />
             <?php endif; ?>
         </div>
-        <div class="downside">
+        <div class="downside" id="contact-us">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-text">
