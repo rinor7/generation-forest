@@ -167,7 +167,7 @@ var swiper = new Swiper(".mySwiper-our-partners", {
       spaceBetween: 60,
     },
     1440: {
-      spaceBetween: 120,
+      spaceBetween: 110,
     },
   },
 });
