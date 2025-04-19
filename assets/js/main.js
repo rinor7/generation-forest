@@ -23,6 +23,19 @@ var Menu = {
     Menu.el.menuTop.toggleClass('menu-top-click');
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
+    $('body').toggleClass('navigation-collapsed');
+
+        // Check if the menu is now collapsed (added class 'navigation-collapsed')
+        if ($('body').hasClass('navigation-collapsed')) {
+            // Add class to html if on specific templates
+            if ($('body').hasClass('page-template-solutions-for-companies') || 
+                $('body').hasClass('page-template-news-media')) {
+                $('html').addClass('bg-different');
+            }
+        } else {
+            // Remove class from html when navigation is closed
+            $('html').removeClass('bg-different');
+        }
     }
     };
 Menu.init();
@@ -178,7 +191,7 @@ var swiper = new Swiper(".mySwiper-our-team", {
 });
 
 //change active bullet at same time with swiper
-var swipersAll = document.querySelectorAll(".swiper"); 
+let swipersAll = document.querySelectorAll(".swiper");
 
 swipersAll.forEach(swiperElement => {
     let swiperInstance = swiperElement.swiper; // Get the Swiper instance
@@ -305,10 +318,3 @@ jQuery(document).ready(function ($) {
       return false;
   });
  });
-
-
- $(document).ready(function() {
-  $('.menu-m').click(function() {
-    $('body').addClass('navigation-collapsed');
-  });
-});

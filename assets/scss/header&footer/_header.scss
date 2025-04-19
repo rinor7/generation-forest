@@ -272,7 +272,16 @@ header {
                 }
             }
         }
+        .menu-m {
+            span {
+                border-color: $black!important;
+            }
+        }
     }
+}
+
+.bg-different {
+    background: $white;
 }
 
 .menu-m {
