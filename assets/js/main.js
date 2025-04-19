@@ -178,6 +178,20 @@ var swiper = new Swiper(".mySwiper-our-team", {
   },
 });
 
+//change active bullet at same time with swiper
+let swipersAll = document.querySelectorAll(".swiper");
+
+swipersAll.forEach(swiperElement => {
+    let swiperInstance = swiperElement.swiper; // Get the Swiper instance
+
+    if (swiperInstance) {
+        swiperInstance.on('slideChange', function() {
+            swiperInstance.pagination.render();
+            swiperInstance.pagination.update();
+        });
+    }
+});
+
 var swiper = new Swiper(".mySwiper-our-concept", {
   slidesPerView: 1.2,
   spaceBetween: 16,
@@ -292,19 +306,3 @@ jQuery(document).ready(function ($) {
       return false;
   });
  });
-
- //change active bullet at same time with swiper
-if (typeof swipersAll === "undefined") {
-  let swipersAll = document.querySelectorAll(".swiper");
-
-  swipersAll.forEach(swiperElement => {
-    let swiperInstance = swiperElement.swiper;
-
-    if (swiperInstance) {
-      swiperInstance.on('slideChange', function() {
-        swiperInstance.pagination.render();
-        swiperInstance.pagination.update();
-      });
-    }
-  });
-}
