@@ -1,7 +1,3 @@
-//change active bullet at same time with swiper
-if (typeof swipersAll === "undefined") {
-  var swipersAll = document.querySelectorAll(".swiper");
-}
 //Hamburger Menu
 var Menu = {
     el: {
@@ -94,6 +90,22 @@ $(".navbar-collapse li a").on("click", function() {
   closeNavbar();
 });
 
+//change active bullet at same time with swiper
+// This declaration of swipersAll happens once
+const swipersAll = document.querySelectorAll(".swiper");
+
+// Loop over each swiper and handle slide changes
+swipersAll.forEach(swiperElement => {
+  let swiperInstance = swiperElement.swiper; // Get the Swiper instance
+  
+  if (swiperInstance) {
+      swiperInstance.on('slideChange', function() {
+          swiperInstance.pagination.render();
+          swiperInstance.pagination.update();
+      });
+  }
+});
+
 var swiper = new Swiper(".mySwiper-our-projects", {
   slidesPerView: 1.2,
   spaceBetween: 16,
@@ -182,16 +194,9 @@ var swiper = new Swiper(".mySwiper-our-team", {
   },
 });
 
-swipersAll.forEach(swiperElement => {
-    let swiperInstance = swiperElement.swiper; // Get the Swiper instance
 
-    if (swiperInstance) {
-        swiperInstance.on('slideChange', function() {
-            swiperInstance.pagination.render();
-            swiperInstance.pagination.update();
-        });
-    }
-});
+
+
 
 var swiper = new Swiper(".mySwiper-our-concept", {
   slidesPerView: 1.2,
