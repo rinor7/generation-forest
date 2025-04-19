@@ -23,7 +23,6 @@ var Menu = {
     Menu.el.menuTop.toggleClass('menu-top-click');
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
-    $('body').toggleClass('navigation-collapsed');
     }
     };
 Menu.init();
@@ -306,3 +305,10 @@ jQuery(document).ready(function ($) {
       return false;
   });
  });
+
+
+ $(document).ready(function() {
+  $('.menu-m').click(function() {
+    $('body').addClass('navigation-collapsed');
+  });
+});
