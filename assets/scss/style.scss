@@ -10,6 +10,11 @@
 @import "layouts/single-post";
 @import "blocks/block-banner-one";
 @import "blocks/impact-boxes"; 
+<<<<<<< HEAD
+=======
+@import "blocks/pt-boxes-swiper";
+@import "blocks/pt-boxes-noswiper";  
+>>>>>>> 1161b54cab5a215978eeef475044d2e9d251e40e
 @import "blocks/block-image-text";
 @import "blocks/block-text-image";
 @import "blocks/block-form-one";
@@ -29,4 +34,5 @@
 @import "blocks/block-our-team";
 @import "blocks/block-ecosystem";
 @import "blocks/pt-our-partners";
-@import "blocks/blogs";
+@import "blocks/blogs"; 
+@import "blocks/blogss"; 
