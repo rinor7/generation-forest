@@ -280,10 +280,6 @@ header {
     }
 }
 
-.bg-different {
-    background: $white;
-}
-
 .menu-m {
     cursor: pointer;
     margin: 0 auto;
@@ -367,5 +363,9 @@ header {
     -moz-transition: 0.44s 0.4s;
     -ms-transition: 0.44s 0.4s;
     -o-transition: 0.44s 0.4s;
+}
+
+.bg-different {
+    background-color: $white;
 }
 /* Header Default END*/
