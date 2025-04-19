@@ -27,7 +27,7 @@ var Menu = {
         // Check if the menu is now collapsed (added class 'navigation-collapsed')
         if ($('body').hasClass('navigation-collapsed')) {
             // Change theme color for navigation collapsed state
-            $('meta[name="theme-color"]').attr('content', '#235145'); //Primary color
+            $('meta[name="theme-color"]').attr('content', '#ffffff'); //Primary color
         } else {
             // Revert to the original theme color when navigation is open
             $('meta[name="theme-color"]').attr('content', '#ffffff'); // White color
