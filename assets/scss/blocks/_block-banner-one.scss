@@ -89,3 +89,23 @@
         }
     }
 }
+
+.page-template-generation-forest {
+    .banner__section {
+        .banner-one__section {
+            .centers {
+                @include md {
+                    row-gap: 80px;
+                }
+                .bottomside {
+                    .buttons {
+                        @include xs {
+                            flex-direction: column;
+                            row-gap: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
