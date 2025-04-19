@@ -295,7 +295,7 @@ jQuery(document).ready(function ($) {
 
  //change active bullet at same time with swiper
 if (typeof swipersAll === "undefined") {
-  var swipersAll = document.querySelectorAll(".swiper");
+  const swipersAll = document.querySelectorAll(".swiper");
 
   swipersAll.forEach(swiperElement => {
     let swiperInstance = swiperElement.swiper;
