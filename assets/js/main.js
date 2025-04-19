@@ -24,13 +24,17 @@ var Menu = {
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
     $('body').toggleClass('navigation-collapsed');
+
         // Check if the menu is now collapsed (added class 'navigation-collapsed')
         if ($('body').hasClass('navigation-collapsed')) {
             // Change theme color for navigation collapsed state
-            $('meta[name="theme-color"]').attr('content', '#FFF'); //Primary color
-        } else {
-            // Revert to the original theme color when navigation is open
-            $('meta[name="theme-color"]').attr('content', '#FFF'); // White color
+            $('meta[name="theme-color"]').attr('content', '#ffffff'); // Red color
+            
+            // Add a small delay for Safari on mobile
+            setTimeout(function() {
+                // Force a reflow/repaint to ensure the color change is applied
+                $('meta[name="theme-color"]').attr('content', '#ffffff');
+            }, 50);
         }
     }
     };
