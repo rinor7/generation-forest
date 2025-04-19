@@ -16,6 +16,26 @@
         @include min-xs {
             border-radius: 0px 0px 24px 24px;
         }
+        &.no-cropped {
+            min-height: unset!important;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-size: unset!important;
+            img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: contain;
+                -o-object-position: center center;
+                object-position: center center;
+            }
+            .container {
+                position: absolute;
+            }
+        }
         .centers {
             display: flex;
             flex-direction: column;
@@ -36,7 +56,7 @@
                     font-size: 58px;
                 }
                 @include sm {
-                    font-size: 42px;
+                    font-size: 38px;
                 }
                 @include xs {
                     max-width: 355px;

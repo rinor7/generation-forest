@@ -102,6 +102,32 @@
                     "preview_size": "medium"
                 },
                 {
+                    "key": "field_6803a567b1b34",
+                    "label": "Background Uncropped",
+                    "name": "uncropped_image_src",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Fill this one only if you want to overwritte the other IMG and make it uncropped",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 1,
+                    "preview_size": "medium"
+                },
+                {
                     "key": "field_67f050be0104d",
                     "label": "Set Min-Height for Mobile",
                     "name": "min_height_mobile",
@@ -1562,5 +1588,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744937813
+    "modified": 1745070292
 }
