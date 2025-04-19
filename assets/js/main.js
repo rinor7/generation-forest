@@ -91,23 +91,19 @@ $(".navbar-collapse li a").on("click", function() {
 });
 
 //change active bullet at same time with swiper
-// Declare `swipersAll` only once at the top of your script
-const swipersAll = document.querySelectorAll(".swiper");
+let swipersAll = document.querySelectorAll(".swiper");
 
-// Use `swipersAll` later in your script
+// Loop over each swiper and handle slide changes
 swipersAll.forEach(swiperElement => {
   let swiperInstance = swiperElement.swiper; // Get the Swiper instance
-
+  
   if (swiperInstance) {
-      swiperInstance.on('slideChange', function() {
-          swiperInstance.pagination.render();
-          swiperInstance.pagination.update();
-      });
+    swiperInstance.on('slideChange', function() {
+      swiperInstance.pagination.render();
+      swiperInstance.pagination.update();
+    });
   }
 });
-
-// If you need to update `swipersAll`, do it like this (no redeclaration)
-swipersAll = document.querySelectorAll(".swiper"); // Update, no redeclaration
 
 
 var swiper = new Swiper(".mySwiper-our-projects", {
