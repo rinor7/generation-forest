@@ -91,19 +91,21 @@ $(".navbar-collapse li a").on("click", function() {
 });
 
 //change active bullet at same time with swiper
-let swipersAll = document.querySelectorAll(".swiper");
+if (typeof swipersAll === "undefined") {
+  var swipersAll = document.querySelectorAll(".swiper");
 
-// Loop over each swiper and handle slide changes
-swipersAll.forEach(swiperElement => {
-  let swiperInstance = swiperElement.swiper; // Get the Swiper instance
-  
-  if (swiperInstance) {
-    swiperInstance.on('slideChange', function() {
-      swiperInstance.pagination.render();
-      swiperInstance.pagination.update();
-    });
-  }
-});
+  swipersAll.forEach(swiperElement => {
+    let swiperInstance = swiperElement.swiper;
+
+    if (swiperInstance) {
+      swiperInstance.on('slideChange', function() {
+        swiperInstance.pagination.render();
+        swiperInstance.pagination.update();
+      });
+    }
+  });
+}
+
 
 
 var swiper = new Swiper(".mySwiper-our-projects", {
