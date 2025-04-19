@@ -273,7 +273,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
+                    "return_format": "array",
                     "allow_in_bindings": 1
                 }
             ]
@@ -675,5 +675,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745018578
+    "modified": 1745084051
 }
