@@ -1,6 +1,5 @@
 /* Text - Image style END */
 .two-side__section-text-image {
-
     .row {
         row-gap: 40px;
         @include md {
@@ -8,7 +7,6 @@
             row-gap: 24px;
         }
     }
-
     .lefts {
         align-self: center;
         @include min-size-1024 {

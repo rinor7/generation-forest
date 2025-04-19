@@ -43,6 +43,130 @@
             }
         }
     }
+    .blog-tabs {
+        border: 0;
+        &.nav-tabs {
+            display: flex;
+            justify-content: center;
+            column-gap: 12px;
+            @include xs {
+                justify-content: left;
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
+            }
+            li {
+                a {
+                    border-radius: 6px;
+                    border: 1px solid var(--colorPrimary, #235145);
+                    background: var(--colorOffWhite, #FFFEFA);
+                    color: var(--colorBlack, #000);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: inline-flex;
+                    padding: 12px 16px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    transition: all .3s ease-in-out;
+                    height: 50px;
+                }
+                &.active {
+                    a {
+                        border-radius: 6px;
+                        border: 1px solid var(--colorPrimary, #235145);
+                        background: var(--colorPrimary, #235145);
+                        color: var(--colorWhite, #FFF);
+
+                    }
+                }
+                &:hover {
+                    a:not(.active) {
+                        background:#2351457d;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    .latest-blog {
+        margin: 60px 0 80px 0;
+        @include md {
+            margin: 30px 0 40px 0;
+        }
+        .row {
+            @include md {
+                row-gap: 24px;
+            }
+        }
+        .lefts {
+            align-self: center;
+    
+            .img {
+                width: 100%;
+                height: 220px;
+                border-radius: 16px;
+                overflow: hidden;
+                @include min-md { 
+                    height: 400px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    
+        .rights {
+            align-self: center;
+            @include min-lg {
+                padding-left: 100px;
+            }
+            .up-content {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+                h2 {
+                    color: var(--Natural-colorDarkGrey500, #0C0D0C);
+                    font-size: 40px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 110%; /* 44px */
+                    @include md {
+                        font-size: 34px;
+                    }
+                }
+                h3 {
+                    color: var(--Base-colorBlack, #000);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 125% */
+                }
+            }
+            .buttons {
+                display: flex;
+                column-gap: 20px;
+                flex-wrap: wrap;
+                row-gap: 10px;
+                margin-top: 16px;
+                .default-btn, a {
+                    @include xs {
+                        width: 100%
+                    }
+                }
+                a {
+                    @include default-grey-btn;
+                    height: 55px!important;
+                }
+            }
+        }
+    }
     .pagination-wrapper {
         margin-top: 36px;
         .page-numbers {
@@ -112,6 +236,19 @@
                     }
                 }
             }
+        }
+    }
+    .active-category-title {
+        color: var(--Natural-colorDarkGrey500, #0c0d0c);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        margin-bottom: 80px;
+        text-align: center;
+        @include md {
+            font-size: 30px;
+            margin-bottom: 40px;
         }
     }
 }

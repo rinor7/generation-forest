@@ -242,14 +242,6 @@ header {
         .header-default {
             .menu-here {
                 nav {
-                    .logo_header { 
-                        li {
-                            // @include transition;
-                            // @include min-md {
-                            //     height: 46px;
-                            // }
-                        }
-                    }
                     #navbarNav {
                         top: 75px;
                         @include min-md {

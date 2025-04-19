@@ -8,7 +8,7 @@ function custom_post_type() {
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
         'taxonomies' => array('our-team-category', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
         'menu_position' => 8,
-        'menu_icon' => 'dashicons-welcome-add-page',
+        'menu_icon' => 'dashicons-universal-access-alt',
     ));
 
     register_post_type('our-projects', array(
@@ -18,17 +18,18 @@ function custom_post_type() {
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
         'taxonomies' => array('category', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
         'menu_position' => 8,
-        'menu_icon' => 'dashicons-welcome-add-page',
+        'menu_icon' => 'dashicons-database-add',
     ));
 
     register_post_type('our-partners', array(
         'labels' => array('name' => 'Our Partners'),
-        'public' => true,
-        'has_archive' => true,
+        'public' => false, // Makes it not publicly accessible
+        'show_ui' => true, // Still shows in admin for editing
+        'show_in_menu' => true,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
-        'taxonomies' => array('our-partners-category', 'post_tag'), //if you need "Uncategorized" category, replace "custom_taxonomy" with "category"
+        'taxonomies' => array('our-partners-category', 'post_tag'),
         'menu_position' => 8,
-        'menu_icon' => 'dashicons-welcome-add-page',
-    ));
+        'menu_icon' => 'dashicons-buddicons-buddypress-logo',
+    ));    
 }
 add_action('init', 'custom_post_type');

@@ -1,10 +1,5 @@
 
 .banner__section-three {
-    // &>.container {
-    //     @include xs {
-    //         padding: 0;
-    //     }
-    // }
     .banner-three__section {
         display: flex;
         align-items: center;
@@ -53,7 +48,6 @@
                         margin: auto;
                     }
                     strong {
-                        // display: block;
                         font-weight: 700;
                     }
                 }

@@ -1,10 +1,5 @@
 
 .banner__section-full {
-    // &>.container {
-    //     @include xs {
-    //         padding: 0;
-    //     }
-    // }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,12 +39,6 @@
                 max-width: 650px;
                 margin: auto;
                 margin-bottom: 8px;
-                // @include md {
-                //     font-size: 36px;
-                // }
-                // @include sm {
-                //     font-size: 30px;
-                // }
                 @include xs {
                     max-width: 355px;
                     margin: auto;

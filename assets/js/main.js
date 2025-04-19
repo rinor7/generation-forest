@@ -54,30 +54,6 @@ $('.icon-close').click( function(){
   $('.fa-search-loc').removeClass('d-none');
 });
 
-
-
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("standard-header").style.cssText = "top: 0px; transition: .5s";
-//   } else {
-//     document.getElementById("standard-header").style.cssText = "top: -45px; transition: .5s;";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
-// $(document).ready(function() {
-//   const navbarToggler = $('.navbar-toggler');
-//   const site = $('.site-home, .site, .site-main, .page-all, .site-other');
-//   const body = $('html');
-//   navbarToggler.on('click', function() {
-//     body.toggleClass('no-scroll');
-//     site.toggleClass('filter-style');
-//   });
-//   });
-
-
 // Menu for standard header with blur effect
 $(document).ready(function() {
   const navbarToggler = $('.navbar-toggler-standard');
@@ -97,7 +73,6 @@ $(document).ready(function() {
   });
 });
 
-
 // Close navbar when click on link ( used for Landingpages )
 function closeNavbar() {
   $(".navbar-toggler").attr("aria-expanded", "false");
@@ -110,18 +85,10 @@ function closeNavbar() {
   $(".menu-menu-1-container").removeClass("act");
   toggleScroll();
 }
+
 $(".navbar-collapse li a").on("click", function() {
   closeNavbar();
 });
-
-
-
-
-// var swiper = new Swiper(".mySwiper", {
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });
 
 var swiper = new Swiper(".mySwiper-our-projects", {
   slidesPerView: 1.2,
@@ -156,6 +123,7 @@ var swiper = new Swiper(".mySwiper-our-projects", {
 var swiper = new Swiper(".mySwiper-our-partners", {
   slidesPerView: 'auto',
   spaceBetween: 30,  
+  loop: true,
   breakpoints: {
     575.98: {
       spaceBetween: 40,
@@ -211,7 +179,7 @@ var swiper = new Swiper(".mySwiper-our-team", {
 });
 
 //change active bullet at same time with swiper
-const swipersAll = document.querySelectorAll(".swiper"); 
+var swipersAll = document.querySelectorAll(".swiper"); 
 
 swipersAll.forEach(swiperElement => {
     let swiperInstance = swiperElement.swiper; // Get the Swiper instance
@@ -248,7 +216,6 @@ var swiper = new Swiper(".mySwiper-our-concept", {
     },
   },
 });
-
 
 // change newsletter butto name when form submitted 
 document.addEventListener("DOMContentLoaded", function () {
