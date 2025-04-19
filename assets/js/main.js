@@ -156,6 +156,7 @@ var swiper = new Swiper(".mySwiper-our-projects", {
 var swiper = new Swiper(".mySwiper-our-partners", {
   slidesPerView: 'auto',
   spaceBetween: 30,  
+  loop: true,
   breakpoints: {
     575.98: {
       spaceBetween: 40,

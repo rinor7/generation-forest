@@ -4,24 +4,47 @@
         padding: 40px 0;
 
         .page-header {
-            margin-bottom: 10px;
+            margin-bottom: 40px;
 
-            .page-title {}
+            .page-title {
+                text-align: center;
+                color: var(--Natural-colorDarkGrey500, #0C0D0C);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+                @include md {
+                    font-size: 30px;
+                }
+            }
         }
 
         .articles {
             display: flex;
             flex-direction: column;
-            row-gap: 10px;
+            row-gap: 20px;
 
             article {
                 .entry-header {
                     .entry-title {
-                        a {}
+                        a {
+                            text-align: center;
+                            color: var(--Natural-colorDarkGrey500, #0C0D0C);
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 110%;
+                            @include md {
+                                font-size: 26px;
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+    &.archive-page-our-partners {
+        
     }
 }
 
