@@ -78,6 +78,8 @@ if (function_exists('acf_add_options_page')) {
 }
 
 
+
+//AKAX for blog posts pagination
 function enqueue_ajax_blog_script() {
     wp_enqueue_script('ajax-pagination', get_template_directory_uri() . '/js/ajax-pagination.js', array('jquery'), null, true);
     wp_localize_script('ajax-pagination', 'my_ajax_obj', array(

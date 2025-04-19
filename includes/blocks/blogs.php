@@ -63,6 +63,3 @@
     </div>
 </section>
 <?php endif; ?>
-<script>
-  
-</script>
