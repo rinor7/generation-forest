@@ -20,36 +20,49 @@
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-        <div class="row">
+
+        <div id="ajax-posts" class="row">
         <?php 
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             $args = array(
-            'posts_per_page' => 9,
-            // 'category_name' => 'blogs'
+                'posts_per_page' => 9,
+                'paged' => $paged,
+                // 'category_name' => 'blogs'
             ); 
             $the_query = new WP_Query( $args );
             if($the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); 
         ?>
-
         <div class="col-lg-4">
-           <a href="<?php the_permalink(); ?>">
-           <div class="blog-inner">
+            <a href="<?php the_permalink(); ?>">
+            <div class="blog-inner">
                 <div class="img">
-                <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                    <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
                 </div>
                 <div class="content">
-                <span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
-                <h2><?php the_title(); ?></h2>
+                    <span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
+                    <h2><?php the_title(); ?></h2>
                 </div>
             </div>
-           </a>
+            </a>
+        </div>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
 
-        <?php
-                endwhile;
-                endif;
-                wp_reset_postdata();
+        <div class="pagination-wrapper">
+            <?php
+                echo paginate_links(array(
+                    'total' => $the_query->max_num_pages,
+                    'current' => $paged,
+                    'prev_text' => '«',
+                    'next_text' => '»',
+                    'format' => '?paged=%#%',
+                    'type' => 'list',
+                ));
             ?>
-            </div>
+        </div>
     </div>
 </section>
 <?php endif; ?>
+<script>
+  
+</script>

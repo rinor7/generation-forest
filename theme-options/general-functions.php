@@ -76,3 +76,60 @@ if (function_exists('acf_add_options_page')) {
         'redirect'    => false
     ));
 }
+
+
+function enqueue_ajax_blog_script() {
+    wp_enqueue_script('ajax-pagination', get_template_directory_uri() . '/js/ajax-pagination.js', array('jquery'), null, true);
+    wp_localize_script('ajax-pagination', 'my_ajax_obj', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_ajax_blog_script');
+
+function load_more_blogs() {
+    $paged = $_POST['paged'] ?? 1;
+
+    $args = array(
+        'posts_per_page' => 9,
+        'paged' => $paged,
+    );
+    $query = new WP_Query($args);
+
+    ob_start();
+    if ($query->have_posts()):
+        while ($query->have_posts()): $query->the_post(); ?>
+            <div class="col-lg-4">
+                <a href="<?php the_permalink(); ?>">
+                <div class="blog-inner">
+                    <div class="img">
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
+                        <h2><?php the_title(); ?></h2>
+                    </div>
+                </div>
+                </a>
+            </div>
+        <?php endwhile;
+    endif;
+    $posts_html = ob_get_clean();
+
+    ob_start();
+    echo paginate_links(array(
+        'total' => $query->max_num_pages,
+        'current' => $paged,
+        'prev_text' => '«',
+        'next_text' => '»',
+        'format' => '?paged=%#%',
+        'type' => 'list',
+    ));
+    $pagination_html = ob_get_clean();
+
+    wp_send_json(array(
+        'posts' => $posts_html,
+        'pagination' => $pagination_html,
+    ));
+}
+add_action('wp_ajax_load_more_blogs', 'load_more_blogs');
+add_action('wp_ajax_nopriv_load_more_blogs', 'load_more_blogs');

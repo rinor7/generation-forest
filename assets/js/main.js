@@ -309,3 +309,33 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+//js for blog pagination
+jQuery(document).ready(function ($) {
+  $('body').on('click', '.pagination-wrapper a', function (e) {
+      e.preventDefault();
+
+      let link = $(this).attr('href');
+      let page = link.split('paged=')[1];
+
+      $.ajax({
+          url: my_ajax_obj.ajax_url,
+          type: 'POST',
+          data: {
+              action: 'load_more_blogs',
+              paged: page,
+          },
+          success: function (response) {
+              $('#ajax-posts').html(response.posts);
+              $('.pagination-wrapper').html(response.pagination);
+
+              // 🔽 Smooth scroll to top of section
+              $('html, body').animate({
+                  scrollTop: $('.blogs__section').offset().top - 120 // or whatever height you need
+              }, 500);
+          }
+      });
+
+      return false;
+  });
+ });
