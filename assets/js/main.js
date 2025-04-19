@@ -179,7 +179,9 @@ var swiper = new Swiper(".mySwiper-our-team", {
 });
 
 //change active bullet at same time with swiper
-let swipersAll = document.querySelectorAll(".swiper");
+if (typeof swipersAll === "undefined") {
+  let swipersAll = document.querySelectorAll(".swiper");
+}
 
 swipersAll.forEach(swiperElement => {
     let swiperInstance = swiperElement.swiper; // Get the Swiper instance
