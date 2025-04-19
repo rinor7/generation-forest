@@ -25,17 +25,17 @@ var Menu = {
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
     $('body').toggleClass('navigation-collapsed');
 
-        // Check if the menu is now collapsed (added class 'navigation-collapsed')
-        if ($('body').hasClass('navigation-collapsed')) {
-            // Change theme color for navigation collapsed state
-            $('meta[name="theme-color"]').attr('content', '#ffffff'); // Red color
-            
-            // Add a small delay for Safari on mobile
-            setTimeout(function() {
-                // Force a reflow/repaint to ensure the color change is applied
-                $('meta[name="theme-color"]').attr('content', '#ffffff');
-            }, 50);
-        }
+    // Change theme color for navigation collapsed state
+    if ($('body').hasClass('navigation-collapsed')) {
+        $('meta[name="theme-color"]').attr('content', '#ffffff'); // Red color
+    } else {
+        $('meta[name="theme-color"]').attr('content', '#ffffff'); // White color
+    }
+
+    // Force reload after changing the theme color to make sure it applies on mobile Safari
+    setTimeout(function() {
+        location.reload();  // Force reload after updating the theme color
+    }, 200); // 200ms delay to let the browser catch up
     }
     };
 Menu.init();
