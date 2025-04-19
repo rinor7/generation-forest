@@ -7,7 +7,7 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta name="theme-color" content="red">
+    <meta name="theme-color" content="#FFF" id="theme-color-meta">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />

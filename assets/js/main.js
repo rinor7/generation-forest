@@ -24,17 +24,13 @@ var Menu = {
     Menu.el.menuMiddle.toggleClass('menu-middle-click');
     Menu.el.menuBottom.toggleClass('menu-bottom-click'); 
     $('body').toggleClass('navigation-collapsed');
-
         // Check if the menu is now collapsed (added class 'navigation-collapsed')
         if ($('body').hasClass('navigation-collapsed')) {
-            // Add class to html if on specific templates
-            if ($('body').hasClass('page-template-solutions-for-companies') || 
-                $('body').hasClass('page-template-news-media')) {
-                $('html').addClass('bg-different');
-            }
+            // Change theme color for navigation collapsed state
+            $('meta[name="theme-color"]').attr('content', '#235145'); //Primary color
         } else {
-            // Remove class from html when navigation is closed
-            $('html').removeClass('bg-different');
+            // Revert to the original theme color when navigation is open
+            $('meta[name="theme-color"]').attr('content', '#ffffff'); // White color
         }
     }
     };
