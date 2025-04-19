@@ -22,7 +22,7 @@ if (!($ccc_section['disable_section'] ?? false)): ?>
                             <div class="buttons">
                                 <?php if (!empty($ccc_section['link1']) && !empty($ccc_section['name1'])): ?>
                                     <div class="btn-base btn-base-one">
-                                        <a href="tel:<?php echo esc_attr($ccc_section['link1']); ?>"><?php echo esc_html($ccc_section['name1']); ?></a>
+                                        <a href="<?php echo esc_attr($ccc_section['link1']); ?>"><?php echo esc_html($ccc_section['name1']); ?></a>
                                     </div>
                                 <?php endif; ?>
 

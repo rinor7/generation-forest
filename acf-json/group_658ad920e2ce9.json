@@ -2158,7 +2158,7 @@
                     "label": "Button Link",
                     "name": "link1",
                     "aria-label": "",
-                    "type": "page_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -2167,13 +2167,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": "",
-                    "post_status": "",
-                    "taxonomy": "",
-                    "allow_archives": 1,
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 0
+                    "return_format": "url",
+                    "allow_in_bindings": 1
                 },
                 {
                     "key": "field_67e7143269eaa",
@@ -2529,5 +2524,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745074693
+    "modified": 1745085096
 }
