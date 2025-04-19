@@ -1,3 +1,7 @@
+//change active bullet at same time with swiper
+if (typeof swipersAll === "undefined") {
+  var swipersAll = document.querySelectorAll(".swiper");
+}
 //Hamburger Menu
 var Menu = {
     el: {
@@ -177,11 +181,6 @@ var swiper = new Swiper(".mySwiper-our-team", {
     },
   },
 });
-
-//change active bullet at same time with swiper
-if (typeof swipersAll === "undefined") {
-  let swipersAll = document.querySelectorAll(".swiper");
-}
 
 swipersAll.forEach(swiperElement => {
     let swiperInstance = swiperElement.swiper; // Get the Swiper instance
