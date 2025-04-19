@@ -230,7 +230,7 @@
                     "label": "Button Link 1",
                     "name": "link1",
                     "aria-label": "",
-                    "type": "page_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -239,13 +239,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": "",
-                    "post_status": "",
-                    "taxonomy": "",
-                    "allow_archives": 1,
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 0
+                    "return_format": "url",
+                    "allow_in_bindings": 1
                 },
                 {
                     "key": "field_6801a354c8c92",
@@ -269,11 +264,11 @@
                     "append": ""
                 },
                 {
-                    "key": "field_6801a354c8c93",
+                    "key": "field_6803db1e3cf87",
                     "label": "Button Link 2",
                     "name": "link2",
                     "aria-label": "",
-                    "type": "page_link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -282,13 +277,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": "",
-                    "post_status": "",
-                    "taxonomy": "",
-                    "allow_archives": 1,
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 0
+                    "return_format": "url",
+                    "allow_in_bindings": 1
                 }
             ]
         },
@@ -1535,5 +1525,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744972141
+    "modified": 1745083519
 }
