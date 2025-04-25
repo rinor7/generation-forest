@@ -32,6 +32,21 @@ include("includes/headers/default.php");
 				<?php the_content(); ?>
 			</div>
 
+			<div class="iframe-youtube">
+			<?php 
+				$youtube_url = get_field('youtube_embed');
+				if (!empty($youtube_url)) {
+					preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $youtube_url, $matches);
+					if (!empty($matches[1])) {
+						$video_id = $matches[1];
+						echo '<div class="youtube-video" style="margin-top: 30px;">';
+						echo '<iframe width="100%" height="450" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" frameborder="0" allowfullscreen loading="lazy"></iframe>';
+						echo '</div>';
+					}
+				}
+				?>
+			</div>
+
 		</div>
 	</div>
 		

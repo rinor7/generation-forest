@@ -55,7 +55,19 @@ if (!($blog_settings['disable_section'] ?? false)):
             <div class="row">
                 <div class="lefts col-lg-6">
                     <div class="img">
-                        <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                        <?php 
+                        $youtube_url = get_field('youtube_embed');
+                        if (!empty($youtube_url)) {
+                            // Extract video ID from the URL
+                            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $youtube_url, $matches);
+                            if (!empty($matches[1])) {
+                                $video_id = $matches[1];
+                                echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" frameborder="0" allowfullscreen loading="lazy"></iframe>';
+                            }
+                        } else {
+                            echo '<img src="' . get_the_post_thumbnail_url() . '" alt="Image" loading="lazy">';
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="rights col-lg-6">
@@ -107,7 +119,19 @@ if (!($blog_settings['disable_section'] ?? false)):
                         <a href="<?php the_permalink(); ?>">
                             <div class="blog-inner">
                                 <div class="img">
-                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="Image" loading="lazy">
+                                    <?php 
+                                    $youtube_url = get_field('youtube_embed');
+                                    if (!empty($youtube_url)) {
+                                        // Extract video ID from the URL
+                                        preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $youtube_url, $matches);
+                                        if (!empty($matches[1])) {
+                                            $video_id = $matches[1];
+                                            echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . esc_attr($video_id) . '" frameborder="0" allowfullscreen loading="lazy"></iframe>';
+                                        }
+                                    } else {
+                                        echo '<img src="' . get_the_post_thumbnail_url() . '" alt="Image" loading="lazy">';
+                                    }
+                                    ?>
                                 </div>
                                 <div class="content">
                                     <span><?php echo strtoupper(get_the_modified_date('F')) . ' ' . get_the_modified_date('j') . ', ' . get_the_modified_date('g:i A'); ?></span>
