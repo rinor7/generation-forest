@@ -9,22 +9,34 @@ if (!($block_content['disable_section'] ?? false)):
         <div class="row">
             
 
-            <div class="simple-textarea__section-two-sides-inner col-lg-6 <?php echo esc_attr($gradient_class); ?>">
+        <div class="simple-textarea__section-two-sides-inner col-lg-6 <?php echo esc_attr($gradient_class); ?>">
+            <?php if (!empty($block_content['titleh1'])) : ?>
                 <div class="upside">
                     <h2><?php echo wp_kses_post($block_content['titleh1']); ?></h2>
                 </div>
+            <?php endif; ?>
+
+            <?php if (!empty($block_content['titleh2'])) : ?>
                 <div class="downside">
                     <?php echo wp_kses_post($block_content['titleh2']); ?>
                 </div>
-            </div>
-            <div class="simple-textarea__section-two-sides-inner col-lg-6 <?php echo esc_attr($gradient_class); ?>">
+            <?php endif; ?>
+        </div>
+
+        <div class="simple-textarea__section-two-sides-inner col-lg-6 <?php echo esc_attr($gradient_class); ?>">
+            <?php if (!empty($block_content['titleh3'])) : ?>
                 <div class="upside">
                     <h2><?php echo wp_kses_post($block_content['titleh3']); ?></h2>
                 </div>
+            <?php endif; ?>
+
+            <?php if (!empty($block_content['titleh4'])) : ?>
                 <div class="downside">
                     <?php echo wp_kses_post($block_content['titleh4']); ?>
                 </div>
-            </div>
+            <?php endif; ?>
+        </div>
+
 
 
         </div>
