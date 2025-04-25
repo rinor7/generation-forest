@@ -21,6 +21,19 @@ function custom_post_type() {
         'menu_icon' => 'dashicons-database-add',
     ));
 
+    register_post_type('our-content', array(
+        'labels' => array('name' => 'CCC Page Content'),
+        'public' => false, // Not publicly queryable
+        'publicly_queryable' => false, // Disable single post page
+        'show_ui' => true, // Still show in admin
+        'show_in_menu' => true,
+        'has_archive' => false,
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
+        'taxonomies' => array('our-content-category', 'post_tag'),
+        'menu_position' => 10,
+        'menu_icon' => 'dashicons-database-add',
+    ));    
+
     register_post_type('our-partners', array(
         'labels' => array('name' => 'Our Partners'),
         'public' => false, // Makes it not publicly accessible

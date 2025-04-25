@@ -40,10 +40,10 @@
                 </aside>
 
 
-                <main class="my-projects col-lg-8">
+                <main class="my-content col-lg-8">
                     <?php
                         $args = array(
-                            'post_type' => 'our-projects',
+                            'post_type' => 'our-content',
                             'posts_per_page' => 10,
                             'order' => 'ASC',
                         );
@@ -60,9 +60,6 @@
                             <div class="content">
                                 <h2><?php the_title(); ?></h2>
                                 <?php the_content(); ?>
-                                <a class="permalink-btn" href="<?php the_permalink(); ?>">
-                                Read more
-                                </a>
                             </div>
                         </div>
                         </a>
