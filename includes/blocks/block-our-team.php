@@ -13,7 +13,7 @@
             <?php endif; ?>
         </div>
         <?php endif; ?>
-        <div class="swiper mySwiper mySwiper-our-team">
+        <div class="swiper mySwiper mySwiper-our-team mySwiper-our-team-executive">
             <div class="swiper-wrapper">
                 <?php
                     $args = array(
@@ -66,7 +66,7 @@
             <?php endif; ?>
         </div>
         <?php endif; ?>
-        <div class="swiper mySwiper mySwiper-our-team">
+        <div class="swiper mySwiper mySwiper-our-team mySwiper-our-team-non-executive">
             <div class="swiper-wrapper">
                 <?php
                     $args = array(

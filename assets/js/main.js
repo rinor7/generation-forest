@@ -136,7 +136,37 @@ var swiper = new Swiper(".mySwiper-our-partners", {
   },
 });
 
-var swiper = new Swiper(".mySwiper-our-team", {
+var swiper = new Swiper(".mySwiper-our-team-non-executive", {
+  slidesPerView: 1.5,
+  spaceBetween: 16,
+  // loop: false,
+  autoHeight: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    575.98: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    767.98: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
+});
+
+var swiper = new Swiper(".mySwiper-our-team-executive", {
   slidesPerView: 1.5,
   spaceBetween: 16,
   // loop: false,
