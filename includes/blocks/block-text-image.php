@@ -5,11 +5,21 @@ add image-no-container-right class on parent div two-side__section-text-image-->
     <div class="container">
         <div class="row">
             <div class="lefts col-lg-6">
-                <div class="up-content">
-                <h2><?php echo ( get_field('two-side-text-image-group')['titleh1'] );?></h2>
-                <h3><?php echo ( get_field('two-side-text-image-group')['titleh2'] );?></h3>
-                <h4><?php echo ( get_field('two-side-text-image-group')['titleh3'] );?></h4>
-                </div>
+                <?php $group = get_field('two-side-text-image-group'); ?>
+                <?php if (!empty($group['titleh1']) || !empty($group['titleh2']) || !empty($group['titleh3'])): ?>
+                    <div class="up-content">
+                        <?php if (!empty($group['titleh1'])): ?>
+                            <h2><?php echo esc_html($group['titleh1']); ?></h2>
+                        <?php endif; ?>
+                        <?php if (!empty($group['titleh2'])): ?>
+                            <h3><?php echo esc_html($group['titleh2']); ?></h3>
+                        <?php endif; ?>
+                        <?php if (!empty($group['titleh3'])): ?>
+                            <h4><?php echo esc_html($group['titleh3']); ?></h4>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
                 <?php $group = get_field('two-side-text-image-group'); ?>
                 <?php if (!empty($group['name1'])): ?>
                     <div class="bottom-content">
