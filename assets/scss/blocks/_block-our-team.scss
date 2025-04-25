@@ -4,7 +4,6 @@
     .swiper {
         overflow: unset;
         .swiper-wrapper {
-            justify-content: center;
             @include xs {
                 height: auto !important;
                 transform: unset !important;
