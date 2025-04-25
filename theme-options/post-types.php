@@ -29,7 +29,7 @@ function custom_post_type() {
         'show_in_menu' => true,
         'has_archive' => false,
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions'),
-        'taxonomies' => array('our-content-category', 'post_tag'),
+        'taxonomies' => array('our-content-category'),
         'menu_position' => 10,
         'menu_icon' => 'dashicons-database-add',
     ));    
