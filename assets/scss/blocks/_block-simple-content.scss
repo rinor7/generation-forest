@@ -53,5 +53,15 @@
                 }
             }
         }
+        &.full-section {
+            .rights {
+                @include min-lg {
+                    padding-left: 0;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
     }
 }

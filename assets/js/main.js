@@ -109,12 +109,8 @@ var swiper = new Swiper(".mySwiper-our-projects", {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    991.98: {
-      slidesPerView: 3,
-      spaceBetween: 8,
-    },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 16,
     },
   },
@@ -144,6 +140,7 @@ var swiper = new Swiper(".mySwiper-our-team", {
   slidesPerView: 1.5,
   spaceBetween: 16,
   // loop: false,
+  centeredSlides: true,
   autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",

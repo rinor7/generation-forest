@@ -466,6 +466,27 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 0
+                },
+                {
+                    "key": "field_680c0693bb46b",
+                    "label": "Max Width of Content",
+                    "name": "full_section_max_width",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This is valid only when you not filling Title for this section",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1200,
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "not recommand using number under 400",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -2524,5 +2545,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745085096
+    "modified": 1745618668
 }
