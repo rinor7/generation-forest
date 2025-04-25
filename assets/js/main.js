@@ -140,7 +140,6 @@ var swiper = new Swiper(".mySwiper-our-team", {
   slidesPerView: 1.5,
   spaceBetween: 16,
   // loop: false,
-  centeredSlides: true,
   autoHeight: true,
   navigation: {
     nextEl: ".swiper-button-next",
