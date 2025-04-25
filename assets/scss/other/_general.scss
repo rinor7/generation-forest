@@ -148,7 +148,9 @@ h3 {
 }
 
 .default-template {
-    margin-top: 40px;
+    & > div {
+        margin-top: 40px;
+    }
     h1 {
         margin-bottom: 24px;
         @include md {
