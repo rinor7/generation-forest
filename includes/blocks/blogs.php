@@ -25,9 +25,9 @@ if (!($blog_settings['disable_section'] ?? false)):
             <?php 
             $categories = [
                 'all' => 'All',
-                'activism' => 'Activism',
-                'news' => 'News',
-                'enivronment' => 'Environment'
+                'articles' => 'Articles',
+                'videos' => 'Videos',
+                'podcasts' => 'Podcasts'
             ];
             $current_cat = $_GET['category'] ?? 'all';
 
