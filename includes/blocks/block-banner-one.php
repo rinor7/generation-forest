@@ -46,7 +46,7 @@ if (!($group_banner['disable_section'] ?? false)):
                                 <div class="buttons">
                                     <?php if (!empty($group_banner['link1']) && !empty($group_banner['name1'])): ?>
                                         <div class="btn-base btn-base-one">
-                                            <a href="<?php echo esc_attr($group_banner['link1']); ?>"><?php echo esc_html($group_banner['name1']); ?></a>
+                                            <a target="_blank" href="<?php echo esc_attr($group_banner['link1']); ?>"><?php echo esc_html($group_banner['name1']); ?></a>
                                         </div>
                                     <?php endif; ?>
 
