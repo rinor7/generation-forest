@@ -6,11 +6,14 @@ $contact_form = get_field('contact_form_shortcode', 'option');
 
 <section class="contact-section-base">
     <div class="container">
-        <div class="upside">
-            <?php if (!empty($contact_bg['url'])): ?>
-                <img src="<?php echo esc_url($contact_bg['url']); ?>" alt="Contact Background" width="100%" />
-            <?php endif; ?>
-        </div>
+        <?php if ( !is_page_template('generation-forest.php') ) : ?>
+            <div class="upside">
+                <?php if (!empty($contact_bg['url'])): ?>
+                    <img src="<?php echo esc_url($contact_bg['url']); ?>" alt="Contact Background" width="100%" />
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
         <div class="downside" id="contact-us">
             <div class="row">
                 <div class="col-lg-6">
