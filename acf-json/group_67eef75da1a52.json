@@ -256,7 +256,7 @@
                     "label": "Open Link in a new tab",
                     "name": "link1_target_blank",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "true_false",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -265,12 +265,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Generation forest",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_67eef79e19e46",
@@ -315,7 +315,7 @@
                     "label": "Open Link in a new tab",
                     "name": "link2_target_blank",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "true_false",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -324,12 +324,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Generation forest",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_67eef79e19e48",
@@ -1620,5 +1620,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745672873
+    "modified": 1745673151
 }
