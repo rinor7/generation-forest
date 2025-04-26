@@ -222,6 +222,27 @@
                     "append": ""
                 },
                 {
+                    "key": "field_680cd9cd33ee9",
+                    "label": "Open Link in a new tab",
+                    "name": "link1_target_blank",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_67eef9cd6c159",
                     "label": "Button Link 1",
                     "name": "link1",
@@ -258,6 +279,27 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_680cd9da33eea",
+                    "label": "Open Link in a new tab",
+                    "name": "link2_target_blank",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_67eef9cd6c15b",
@@ -638,6 +680,27 @@
                     "append": ""
                 },
                 {
+                    "key": "field_680cdb2bd0195",
+                    "label": "Open Link in a new tab",
+                    "name": "link1_target_blank",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_68019ec69e2c8",
                     "label": "Button Link 1",
                     "name": "link1",
@@ -675,5 +738,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745084225
+    "modified": 1745673016
 }

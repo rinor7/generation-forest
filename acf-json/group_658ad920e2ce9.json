@@ -224,6 +224,27 @@
                     "append": ""
                 },
                 {
+                    "key": "field_680cd93aa5824",
+                    "label": "Open Link in a new tab",
+                    "name": "link1_target_blank",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_67e5b64bbb96b",
                     "label": "Button Link 1",
                     "name": "link1",
@@ -265,6 +286,27 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                },
+                {
+                    "key": "field_680cd94fa5825",
+                    "label": "Open Link in a new tab",
+                    "name": "link2_target_blank",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_67e5b661bb96d",
@@ -2545,5 +2587,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745622572
+    "modified": 1745672539
 }

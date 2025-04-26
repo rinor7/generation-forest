@@ -46,13 +46,21 @@ if (!($group_banner['disable_section'] ?? false)):
                                 <div class="buttons">
                                     <?php if (!empty($group_banner['link1']) && !empty($group_banner['name1'])): ?>
                                         <div class="btn-base btn-base-one">
-                                            <a target="_blank" href="<?php echo esc_attr($group_banner['link1']); ?>"><?php echo esc_html($group_banner['name1']); ?></a>
+                                            <a 
+                                                <?php if (!empty($group_banner['link1_target_blank'])) echo 'target="_blank"'; ?> 
+                                                href="<?php echo esc_attr($group_banner['link1']); ?>">
+                                                <?php echo esc_html($group_banner['name1']); ?>
+                                            </a>
                                         </div>
                                     <?php endif; ?>
 
                                     <?php if (!empty($group_banner['link2']) && !empty($group_banner['name2'])): ?>
                                         <div class="btn-base btn-base-two">
-                                            <a target="_blank" href="<?php echo esc_url($group_banner['link2']); ?>"><?php echo esc_html($group_banner['name2']); ?></a>
+                                            <a 
+                                                <?php if (!empty($group_banner['link2_target_blank'])) echo 'target="_blank"'; ?> 
+                                                href="<?php echo esc_url($group_banner['link2']); ?>">
+                                                <?php echo esc_html($group_banner['name2']); ?>
+                                            </a>
                                         </div>
                                     <?php endif; ?>
                                 </div>

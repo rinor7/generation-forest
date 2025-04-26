@@ -252,6 +252,27 @@
                     "append": ""
                 },
                 {
+                    "key": "field_680cda9383fe5",
+                    "label": "Open Link in a new tab",
+                    "name": "link1_target_blank",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Generation forest",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_67eef79e19e46",
                     "label": "Button Link 1",
                     "name": "link1",
@@ -283,6 +304,27 @@
                         "id": ""
                     },
                     "default_value": "About us",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_680cda9c83fe6",
+                    "label": "Open Link in a new tab",
+                    "name": "link2_target_blank",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Generation forest",
                     "maxlength": "",
                     "allow_in_bindings": 0,
                     "placeholder": "",
@@ -1578,5 +1620,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745083590
+    "modified": 1745672873
 }
