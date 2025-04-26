@@ -15,7 +15,11 @@ if (!($ccc_section['disable_section'] ?? false)): ?>
                             <div class="buttons">
                                 <?php if (!empty($ccc_section['link1']) && !empty($ccc_section['name1'])): ?>
                                     <div class="btn-base btn-base-one">
-                                        <a target="_blank" href="<?php echo esc_attr($ccc_section['link1']); ?>"><?php echo esc_html($ccc_section['name1']); ?></a>
+                                        <a 
+                                            <?php if (!empty($ccc_section['link1_target_blank'])) echo 'target="_blank"'; ?> 
+                                            href="<?php echo esc_attr($ccc_section['link1']); ?>">
+                                            <?php echo esc_html($ccc_section['name1']); ?>
+                                        </a>
                                     </div>
                                 <?php endif; ?>
                             </div>
