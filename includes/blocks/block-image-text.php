@@ -14,11 +14,20 @@ add image-no-container-left class on parent div two-side__section-image-text-->
             </div>
             <div class="rights col-lg-6">
             
-                <div class="up-content">
-                <h2><?php echo ( get_field('two-side-image-text-group')['titleh1'] );?></h2>
-                <h3><?php echo ( get_field('two-side-image-text-group')['titleh2'] );?></h3>
-                <h4><?php echo ( get_field('two-side-image-text-group')['titleh3'] );?></h4>
-                </div>
+            <?php $group = get_field('two-side-image-text-group'); ?>
+            <div class="up-content">
+                <?php if (!empty($group['titleh1'])) : ?>
+                    <h2><?php echo esc_html($group['titleh1']); ?></h2>
+                <?php endif; ?>
+
+                <?php if (!empty($group['titleh2'])) : ?>
+                    <h3><?php echo esc_html($group['titleh2']); ?></h3>
+                <?php endif; ?>
+
+                <?php if (!empty($group['titleh3'])) : ?>
+                    <h4><?php echo esc_html($group['titleh3']); ?></h4>
+                <?php endif; ?>
+            </div>
 
                 <div class="bottom-content">
                 <?php $group = get_field('two-side-image-text-group'); ?>
