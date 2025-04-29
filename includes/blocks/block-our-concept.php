@@ -43,7 +43,7 @@
                             $title_nr = $impact_group_values["box{$i}img"];
 
                             // Only show the slide if at least one field is filled
-                            if ($subtitle || $title || $image): 
+                            if ($subtitle || $title || $title_nr):
                         ?>
                         <div class="swiper-slide">
                             <div class="slider-wrap">
