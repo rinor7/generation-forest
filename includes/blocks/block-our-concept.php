@@ -48,7 +48,7 @@
                         <div class="swiper-slide">
                             <div class="slider-wrap">
                                 <div class="slider-wrap-inner">
-                                <?php if ($title): ?>
+                                <?php if ($title_nr): ?>
                                     <span class="icon"><?php echo esc_html($title_nr); ?></span>
                                 <?php endif; ?>
                                 <?php if ($title): ?>
