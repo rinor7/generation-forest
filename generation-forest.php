@@ -10,6 +10,8 @@ include("includes/headers/default.php");
 
     <?php get_template_part('includes/blocks/block-text-image', null, array()); ?>
 
+    <?php get_template_part('includes/blocks/block-image-text2', null, array()); ?>
+
     <?php get_template_part('includes/blocks/block-tree', null, array()); ?>
 
     <?php get_template_part('includes/blocks/block-company-structure', null, array()); ?>
