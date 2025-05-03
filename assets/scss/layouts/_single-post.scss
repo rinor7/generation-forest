@@ -93,5 +93,18 @@
             font-size: 16px;
         }
     }
+    .iframe-youtube {
+        .youtube-video {
+            iframe {
+                border-radius: 16px;
+                @include sm {
+                    height: 400px;
+                }
+                @include xm {
+                    height: 300px;
+                }
+            }
+        }
+    }
 }
 /*Single post END*/
