@@ -13,8 +13,11 @@
             padding-left: 16px;
             padding-bottom: 30px;
         }
+        .swiper-slide {
+            height: 100%;
+        }
         .slider-wrap {
-            justify-content: flex-end;
+            // justify-content: flex-end;
             flex-direction: column;
             display: flex;
             text-align: center;
@@ -22,6 +25,7 @@
             background: var(--colorLightGray, #F1F1E8);
             border-radius: 16px;
             overflow: hidden;
+            height: 100%;
             .content {
                 display: flex;
                 flex-direction: column;
@@ -82,12 +86,14 @@
                 height: 280px;
                 position: relative;
                 overflow: hidden;
+                margin-top: auto;
                 @include transition;
                 @include md {
                     height: 180px;
                 }
                 .permalink-btn {
-                    pointer-events: none;
+                    // pointer-events: none;
+                    padding-top: 10px;
                     position: absolute;
                     bottom: 20px;
                     right: 20px;

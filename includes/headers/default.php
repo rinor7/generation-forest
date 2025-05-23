@@ -11,7 +11,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Change this to "noindex, nofollow" when you go live -->
+    <!-- Change this to "index, follow" when you go live -->
     <meta name="robots" content="noindex, nofollow"> 
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
     <!-- Open Graph Description (for social media platforms like Facebook, LinkedIn, etc.) -->

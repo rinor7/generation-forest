@@ -34,7 +34,7 @@
                         $loop->the_post();
                     ?>
                 <div class="swiper-slide">
-                    <a href="<?php the_permalink(); ?>" class="main-href">
+                    <!-- <a href="<?php the_permalink(); ?>" class="main-href"> -->
                         <div class="slider-wrap">
 
                             <div class="content">
@@ -56,7 +56,7 @@
                                 </a>
                             </div>
                         </div>
-                    </a>
+                    <!-- </a> -->
                 </div>
                 <?php
                     endwhile;
